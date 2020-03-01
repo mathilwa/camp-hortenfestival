@@ -1,8 +1,8 @@
 {
   "name": "camp-hortenfestival",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://mathilwa.github.io/camp-hortenfestival",
+  "private": false,
+  "homepage": "https://mathilwa.github.io/camp-hortenfestival/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
