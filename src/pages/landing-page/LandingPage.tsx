@@ -11,6 +11,7 @@ const LandingPage = () => (
         <div className="headingLogoContainer">
             <img src={headingLogo} />
         </div>
+        <p className="festivalDates">18. - 21. juni</p>
     </div>
 );
 

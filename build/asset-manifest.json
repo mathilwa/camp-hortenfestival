@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/camp-hortenfestival/static/css/main.8f4c5f75.chunk.css",
-    "main.js": "/camp-hortenfestival/static/js/main.0f5b3ebc.chunk.js",
-    "main.js.map": "/camp-hortenfestival/static/js/main.0f5b3ebc.chunk.js.map",
+    "main.css": "/camp-hortenfestival/static/css/main.6f02bbf4.chunk.css",
+    "main.js": "/camp-hortenfestival/static/js/main.bc64a814.chunk.js",
+    "main.js.map": "/camp-hortenfestival/static/js/main.bc64a814.chunk.js.map",
     "runtime-main.js": "/camp-hortenfestival/static/js/runtime-main.26990bfc.js",
     "runtime-main.js.map": "/camp-hortenfestival/static/js/runtime-main.26990bfc.js.map",
     "static/js/2.6d21a7db.chunk.js": "/camp-hortenfestival/static/js/2.6d21a7db.chunk.js",
     "static/js/2.6d21a7db.chunk.js.map": "/camp-hortenfestival/static/js/2.6d21a7db.chunk.js.map",
     "index.html": "/camp-hortenfestival/index.html",
-    "precache-manifest.2b38c612452e7e5fcbad441b9e259b81.js": "/camp-hortenfestival/precache-manifest.2b38c612452e7e5fcbad441b9e259b81.js",
+    "precache-manifest.500309c95f703c3d1141e3302ea750ee.js": "/camp-hortenfestival/precache-manifest.500309c95f703c3d1141e3302ea750ee.js",
     "service-worker.js": "/camp-hortenfestival/service-worker.js",
-    "static/css/main.8f4c5f75.chunk.css.map": "/camp-hortenfestival/static/css/main.8f4c5f75.chunk.css.map",
+    "static/css/main.6f02bbf4.chunk.css.map": "/camp-hortenfestival/static/css/main.6f02bbf4.chunk.css.map",
     "static/js/2.6d21a7db.chunk.js.LICENSE.txt": "/camp-hortenfestival/static/js/2.6d21a7db.chunk.js.LICENSE.txt",
     "static/media/camp-hortenfestival.svg": "/camp-hortenfestival/static/media/camp-hortenfestival.2a97b4a7.svg",
     "static/media/matta.png": "/camp-hortenfestival/static/media/matta.fb322a1e.png"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.26990bfc.js",
     "static/js/2.6d21a7db.chunk.js",
-    "static/css/main.8f4c5f75.chunk.css",
-    "static/js/main.0f5b3ebc.chunk.js"
+    "static/css/main.6f02bbf4.chunk.css",
+    "static/js/main.bc64a814.chunk.js"
   ]
 }

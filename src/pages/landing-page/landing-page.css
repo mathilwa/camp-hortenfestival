@@ -20,10 +20,37 @@
 }
 
 .headingLogoContainer img {
-    width: 20rem;
+    width: 15rem;
+}
+
+.festivalDates {
+    font-size: 1.25rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 400px) {
+    .festivalDates {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+
+    .headingLogoContainer img {
+        width: 20rem;
+    }
 }
 
 @media screen and (min-width: 770px) {
+    .festivalDates {
+        font-size: 2rem;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: bold;
+    }
+
     .appHeader {
         padding: 40px;
     }
