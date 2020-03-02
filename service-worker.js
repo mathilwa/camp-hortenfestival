@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/camp-hortenfestival/precache-manifest.d44ec7e3a7cf9652fd6f6fd1809525b2.js"
+  "/camp-hortenfestival/precache-manifest.2b38c612452e7e5fcbad441b9e259b81.js"
 );
 
 self.addEventListener('message', (event) => {
