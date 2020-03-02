@@ -1,0 +1,53 @@
+.app {
+    text-align: center;
+}
+
+.appHeader {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.appHeader .spinningUser {
+    height: 40px;
+    pointer-events: none;
+}
+
+.heading {
+    text-transform: uppercase;
+    font-size: 4rem;
+    overflow-wrap: break-word;
+}
+
+.headingLogoContainer img {
+    width: 20rem;
+}
+
+@media screen and (min-width: 770px) {
+    .appHeader {
+        padding: 40px;
+    }
+
+    .headingLogoContainer img {
+        width: 40rem;
+    }
+
+    .appHeader .spinningUser {
+        height: 60px;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .spinningUser {
+        animation: App-logo-spin infinite 3s linear;
+    }
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
