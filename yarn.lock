@@ -1284,6 +1284,11 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
+"@types/canvas-confetti@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@types/canvas-confetti/-/canvas-confetti-1.0.0.tgz#784fca12934ae3a8b50213672e7747b2efb0ffa7"
+  integrity sha512-Z3Eh7qlYdi9cvotmreZjqxaUSwpUYu/s2uzSvnGgktuHhpj8FHq6JSJLVYP3R4YNZN/d8nNOG5y2cKmautyDCQ==
+
 "@types/color-name@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
@@ -2541,6 +2546,11 @@ caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30001020, can
   version "1.0.30001027"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001027.tgz#283e2ef17d94889cc216a22c6f85303d78ca852d"
   integrity sha512-7xvKeErvXZFtUItTHgNtLgS9RJpVnwBlWX8jSo/BO8VsF6deszemZSkJJJA1KOKrXuzZH4WALpAJdq5EyfgMLg==
+
+canvas-confetti@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/canvas-confetti/-/canvas-confetti-1.1.0.tgz#d6bfc7fe6645b8fcb46a3bcedc31c38f3469ad06"
+  integrity sha512-QVBXja2KMTSqIyzPHUF2C98EYjbilWyFIaBxc7dHUoERFC5Mbqgu7ePrT+dOj2YCiptlsNFNF3oJv14Cai6ayQ==
 
 capture-exit@^2.0.0:
   version "2.0.0"

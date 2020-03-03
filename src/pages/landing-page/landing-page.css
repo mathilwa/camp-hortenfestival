@@ -1,5 +1,6 @@
 .app {
     text-align: center;
+    position: relative;
 }
 
 .appHeader {
@@ -29,6 +30,11 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: bold;
+}
+
+.unicorn {
+    position: absolute;
+    height: 150px;
 }
 
 @media screen and (min-width: 400px) {
