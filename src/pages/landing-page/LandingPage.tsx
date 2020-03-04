@@ -4,12 +4,15 @@ import unicorn from './icons/unicorn.svg';
 import headingLogo from './icons/camp-hortenfestival.svg';
 import './landing-page.css';
 import confetti from 'canvas-confetti';
+import classNames from 'classnames';
 
 const LandingPage = () => {
     const [mousePosition, setMousePosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
     const onMouseMove = (event: any) => {
         setMousePosition({ x: event.pageX, y: event.pageY });
     };
+
+    const isTochDevice = 'ontouchstart' in window;
 
     const screenWidth =
         document && document.getElementById('root') && document.getElementById('root')!.offsetWidth;
@@ -22,20 +25,27 @@ const LandingPage = () => {
     const launceConfetti = () => {
         confetti({
             origin: {
-                x: screenWidth ? xPosition / screenWidth : 0,
-                y: screenHeight ? yPosition / screenHeight : 0,
+                x: screenWidth && !isTochDevice ? xPosition / screenWidth : Math.random(),
+                y: screenHeight && !isTochDevice ? yPosition / screenHeight : Math.random(),
             },
         });
     };
 
     return (
-        <div className="app" onMouseMove={onMouseMove} onClick={launceConfetti}>
+        <div className="app" onMouseMove={onMouseMove} onClick={launceConfetti} onTouchEnd={launceConfetti}>
             <header className="appHeader">
                 <img src={matta} className="spinningUser" alt="logo" />
             </header>
-            <img src={unicorn} className="unicorn" alt="unicorn" style={{ left: xPosition, top: yPosition }} />
+
+            <img
+                src={unicorn}
+                className={classNames('unicorn', isTochDevice && 'unicornMobile')}
+                alt="unicorn"
+                style={{ left: isTochDevice ? -150 : xPosition, top: isTochDevice ? 30 : yPosition }}
+            />
+
             <div className="headingLogoContainer">
-                <img src={headingLogo} />
+                <img src={headingLogo} alt="camp-hortenfestival-logo" />
             </div>
             <p className="festivalDates">18. - 21. juni</p>
         </div>
