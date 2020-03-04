@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/camp-hortenfestival/static/css/main.315cb8ed.chunk.css",
-    "main.js": "/camp-hortenfestival/static/js/main.00bef06e.chunk.js",
-    "main.js.map": "/camp-hortenfestival/static/js/main.00bef06e.chunk.js.map",
+    "main.css": "/camp-hortenfestival/static/css/main.95786ac6.chunk.css",
+    "main.js": "/camp-hortenfestival/static/js/main.15082c9f.chunk.js",
+    "main.js.map": "/camp-hortenfestival/static/js/main.15082c9f.chunk.js.map",
     "runtime-main.js": "/camp-hortenfestival/static/js/runtime-main.26990bfc.js",
     "runtime-main.js.map": "/camp-hortenfestival/static/js/runtime-main.26990bfc.js.map",
-    "static/js/2.2d22c7e9.chunk.js": "/camp-hortenfestival/static/js/2.2d22c7e9.chunk.js",
-    "static/js/2.2d22c7e9.chunk.js.map": "/camp-hortenfestival/static/js/2.2d22c7e9.chunk.js.map",
+    "static/js/2.4d377699.chunk.js": "/camp-hortenfestival/static/js/2.4d377699.chunk.js",
+    "static/js/2.4d377699.chunk.js.map": "/camp-hortenfestival/static/js/2.4d377699.chunk.js.map",
     "index.html": "/camp-hortenfestival/index.html",
-    "precache-manifest.5b2d87f0fb9f17c253302fcc21c7a68b.js": "/camp-hortenfestival/precache-manifest.5b2d87f0fb9f17c253302fcc21c7a68b.js",
+    "precache-manifest.796ffbf889fda371b19c0eae794e883f.js": "/camp-hortenfestival/precache-manifest.796ffbf889fda371b19c0eae794e883f.js",
     "service-worker.js": "/camp-hortenfestival/service-worker.js",
-    "static/css/main.315cb8ed.chunk.css.map": "/camp-hortenfestival/static/css/main.315cb8ed.chunk.css.map",
-    "static/js/2.2d22c7e9.chunk.js.LICENSE.txt": "/camp-hortenfestival/static/js/2.2d22c7e9.chunk.js.LICENSE.txt",
+    "static/css/main.95786ac6.chunk.css.map": "/camp-hortenfestival/static/css/main.95786ac6.chunk.css.map",
+    "static/js/2.4d377699.chunk.js.LICENSE.txt": "/camp-hortenfestival/static/js/2.4d377699.chunk.js.LICENSE.txt",
     "static/media/camp-hortenfestival.svg": "/camp-hortenfestival/static/media/camp-hortenfestival.2a97b4a7.svg",
     "static/media/matta.png": "/camp-hortenfestival/static/media/matta.fb322a1e.png",
     "static/media/unicorn.svg": "/camp-hortenfestival/static/media/unicorn.c53a49bb.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.26990bfc.js",
-    "static/js/2.2d22c7e9.chunk.js",
-    "static/css/main.315cb8ed.chunk.css",
-    "static/js/main.00bef06e.chunk.js"
+    "static/js/2.4d377699.chunk.js",
+    "static/css/main.95786ac6.chunk.css",
+    "static/js/main.15082c9f.chunk.js"
   ]
 }
