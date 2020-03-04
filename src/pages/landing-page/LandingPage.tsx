@@ -32,7 +32,7 @@ const LandingPage = () => {
     };
 
     return (
-        <div className="app" onMouseMove={onMouseMove} onClick={launceConfetti} onTouchEnd={launceConfetti}>
+        <div className="app" onMouseMove={onMouseMove} onClick={launceConfetti}>
             <header className="appHeader">
                 <img src={matta} className="spinningUser" alt="logo" />
             </header>
