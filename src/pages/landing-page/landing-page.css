@@ -3,13 +3,13 @@
     position: relative;
 }
 
-.appHeader {
+.app-header {
     padding: 20px;
     display: flex;
     justify-content: flex-end;
 }
 
-.appHeader .spinningUser {
+.app-header .spinning-user {
     height: 40px;
     pointer-events: none;
 }
@@ -20,11 +20,11 @@
     overflow-wrap: break-word;
 }
 
-.headingLogoContainer img {
+.heading-logo-container img {
     width: 15rem;
 }
 
-.festivalDates {
+.festival-dates {
     font-size: 1.25rem;
     color: white;
     text-transform: uppercase;
@@ -38,9 +38,28 @@
     transform: translateX(-145px);
 }
 
-.unicorn.unicornMobile {
+.unicorn.unicorn-mobile {
     height: 15rem;
     animation: moveUnicorn 4s infinite linear;
+}
+
+.landing-page-top {
+    margin-bottom: 8rem;
+}
+
+.romoversikt {
+    padding: 0 1rem;
+}
+
+.romfordeling-heading {
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 3rem;
+}
+
+.etasje {
+    margin-bottom: 10rem;
+    width: 100%;
 }
 
 @keyframes moveUnicorn {
@@ -70,18 +89,22 @@
 }
 
 @media screen and (min-width: 400px) {
-    .festivalDates {
+    .festival-dates {
         font-size: 1.5rem;
         letter-spacing: 2px;
     }
 
-    .headingLogoContainer img {
+    .heading-logo-container img {
         width: 20rem;
+    }
+
+    .romoversikt {
+        padding: 0 2rem;
     }
 }
 
 @media screen and (min-width: 770px) {
-    .festivalDates {
+    .festival-dates {
         font-size: 2rem;
         color: white;
         text-transform: uppercase;
@@ -89,21 +112,33 @@
         font-weight: bold;
     }
 
-    .appHeader {
+    .app-header {
         padding: 40px;
     }
 
-    .headingLogoContainer img {
+    .heading-logo-container img {
         width: 40rem;
     }
 
-    .appHeader .spinningUser {
+    .app-header .spinning-user {
         height: 60px;
+    }
+
+    .romoversikt {
+        padding: 0 3rem;
+    }
+
+    .romfordeling-heading {
+        width: 80%;
+    }
+
+    .etasje {
+        width: 60%;
     }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    .spinningUser {
+    .spinning-user {
         animation: App-logo-spin infinite 3s linear;
     }
 }
