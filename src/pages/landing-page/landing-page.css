@@ -38,7 +38,7 @@
 }
 
 .unicorn.unicornMobile {
-    height: 10rem;
+    height: 15rem;
     animation: moveUnicorn 4s infinite linear;
 }
 

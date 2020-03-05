@@ -41,7 +41,7 @@ const LandingPage = () => {
                 src={unicorn}
                 className={classNames('unicorn', isTochDevice && 'unicornMobile')}
                 alt="unicorn"
-                style={{ left: isTochDevice ? -150 : xPosition, top: isTochDevice ? 30 : yPosition }}
+                style={{ left: isTochDevice ? -130 : xPosition, top: isTochDevice ? 50 : yPosition }}
             />
 
             <div className="headingLogoContainer">
