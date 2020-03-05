@@ -35,6 +35,7 @@
 .unicorn {
     position: absolute;
     height: 150px;
+    transform: translateX(-145px);
 }
 
 .unicorn.unicornMobile {
