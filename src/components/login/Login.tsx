@@ -1,10 +1,10 @@
 import React, { FormEvent, useState } from 'react';
 import firebase from 'firebase/app';
 import 'firebase/auth';
-import './login.css';
+import css from './login.less';
 import Input from '../input/Input';
 import Logo from '../logo/Logo';
-import InputForm from "../input-form/InputForm";
+import InputForm from '../input-form/InputForm';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -31,7 +31,7 @@ const Login = () => {
     };
 
     return (
-        <div className="login-container">
+        <div className={css.container}>
             <Logo />
             <InputForm onSubmit={handleSubmit} errorMessage={errorMessage} buttonLabel="Here I come!">
                 <Input

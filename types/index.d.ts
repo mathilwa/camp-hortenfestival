@@ -18,7 +18,7 @@ declare module '*.png' {
     export default content;
 }
 
-declare module '*.css';
+declare module '*.less';
 
 interface ExpededJest extends jest.Expect {
     <T = any>(actual: T, message: string): jest.Matchers<T>;

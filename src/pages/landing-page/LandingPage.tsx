@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import matta from './icons/matta.png';
 import unicorn from './icons/unicorn.svg';
-import './landing-page.css';
+import css from './landing-page.less';
 import confetti from 'canvas-confetti';
 import classNames from 'classnames';
 import andreEtasje from '../../components/romoversikt/icons/andre-etasje.svg';
@@ -59,28 +59,28 @@ const LandingPage = () => {
     };
 
     return (
-        <div className="app" onMouseMove={onMouseMove} onClick={launceConfetti}>
-            <header className="app-header">
-                <img src={matta} className="spinning-user" alt="logo" />
+        <div className={css.app} onMouseMove={onMouseMove} onClick={launceConfetti}>
+            <header className={css.appHeader}>
+                <img src={matta} className={css.spinningUser} alt="logo" />
             </header>
 
-            <div className="landing-page-top">
+            <div className={css.landingPageTop}>
                 <img
                     src={unicorn}
-                    className={classNames('unicorn', isTochDevice && 'unicorn-mobile')}
+                    className={classNames(css.unicorn, { [css.unicornMobile]: isTochDevice })}
                     alt="unicorn"
                     style={{ left: isTochDevice ? -130 : xPosition, top: isTochDevice ? 50 : yPosition }}
                 />
 
                 <Logo />
-                <p className="festival-dates">18. - 21. juni</p>
+                <p className={css.festivalDates}>18. - 21. juni</p>
             </div>
-            <div className="romoversikt">
-                <div className="romfordeling-heading">
+            <div className={css.romoversikt}>
+                <div className={css.romfordelingHeading}>
                     <img src={romfordelingLogo} alt="romfordeling-logo" />
                 </div>
-                <img className="etasje" src={forsteEtasje} alt="forste-etasje" />
-                <img className="etasje" src={andreEtasje} alt="andre-etasje" />
+                <img className={css.etasje} src={forsteEtasje} alt="forste-etasje" />
+                <img className={css.etasje} src={andreEtasje} alt="andre-etasje" />
             </div>
 
             <button onClick={handleSignOut}>Logg ut</button>

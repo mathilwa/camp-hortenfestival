@@ -3,7 +3,7 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import Input from '../input/Input';
 import InputForm from '../input-form/InputForm';
-import './user-information.css';
+import css from './user-information.less';
 
 interface Props {
     user: firebase.User;
@@ -18,9 +18,9 @@ const UserInformation: React.FC<Props> = ({ user }) => {
     };
 
     return (
-        <div className="user-info-container">
-            <div className="heading-container">
-                <h1 className="heading">Du! Ja du, ja.</h1>
+        <div className={css.container}>
+            <div className={css.headingContainer}>
+                <h1 className={css.heading}>Du! Ja du, ja.</h1>
                 <p>Du må fylle ut litt informasjon om deg selv</p>
             </div>
             <InputForm onSubmit={updateUser} buttonLabel="Nok om meg">

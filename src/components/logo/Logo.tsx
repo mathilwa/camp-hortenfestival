@@ -1,9 +1,9 @@
 import headingLogo from './icons/camp-hortenfestival.svg';
 import React from 'react';
-import './logo.css';
+import css from './logo.less';
 
 const Logo = () => (
-    <div className="heading-logo-container">
+    <div className={css.headingLogoContainer}>
         <img src={headingLogo} alt="camp-hortenfestival-logo" />
     </div>
 );

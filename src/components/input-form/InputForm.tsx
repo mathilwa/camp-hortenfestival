@@ -1,5 +1,5 @@
 import React, { FormEvent } from 'react';
-import './input-form.css';
+import css from './input-form.less';
 
 interface Props {
     onSubmit: (event: FormEvent) => void;
@@ -8,13 +8,13 @@ interface Props {
 }
 
 const InputForm: React.FC<Props> = ({ onSubmit, errorMessage, buttonLabel, children }) => (
-    <form onSubmit={onSubmit} className="login-form">
-        <div className="input-container">
+    <form onSubmit={onSubmit} className={css.loginForm}>
+        <div className={css.inputContainer}>
             {children}
             {errorMessage && <span>{errorMessage}</span>}
         </div>
 
-        <button type="submit" className="login-button">
+        <button type="submit" className={css.loginButton}>
             <span>{buttonLabel}</span>
         </button>
     </form>

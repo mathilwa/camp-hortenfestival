@@ -1,5 +1,5 @@
 import React from 'react';
-import './input.css';
+import css from './input.less';
 
 interface Props {
     placeholder: string;
@@ -14,7 +14,7 @@ const Input: React.FC<Props> = ({ placeholder, value, onChange, type = 'text' })
         value={value}
         type={type}
         onChange={event => onChange(event)}
-        className="input"
+        className={css.input}
     />
 );
 
