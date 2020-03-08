@@ -14,12 +14,6 @@
     pointer-events: none;
 }
 
-.heading {
-    text-transform: uppercase;
-    font-size: 4rem;
-    overflow-wrap: break-word;
-}
-
 .heading-logo-container img {
     width: 15rem;
 }
@@ -94,10 +88,6 @@
         letter-spacing: 2px;
     }
 
-    .heading-logo-container img {
-        width: 20rem;
-    }
-
     .romoversikt {
         padding: 0 2rem;
     }
@@ -114,10 +104,6 @@
 
     .app-header {
         padding: 40px;
-    }
-
-    .heading-logo-container img {
-        width: 40rem;
     }
 
     .app-header .spinning-user {

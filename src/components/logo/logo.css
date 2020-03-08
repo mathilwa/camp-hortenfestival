@@ -1,0 +1,21 @@
+.container {
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.heading-logo-container {
+    margin-bottom: 2rem;
+}
+
+.heading-logo-container img {
+    width: 40rem;
+}
+
+@media screen and (min-width: 400px) {
+    .heading-logo-container img {
+        width: 20rem;
+    }
+}
