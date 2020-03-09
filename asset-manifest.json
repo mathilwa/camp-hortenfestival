@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/camp-hortenfestival/static/css/main.34cb6852.chunk.css",
-    "main.js": "/camp-hortenfestival/static/js/main.0404628a.chunk.js",
-    "main.js.map": "/camp-hortenfestival/static/js/main.0404628a.chunk.js.map",
+    "main.js": "/camp-hortenfestival/static/js/main.1a7b05d2.chunk.js",
+    "main.js.map": "/camp-hortenfestival/static/js/main.1a7b05d2.chunk.js.map",
     "runtime-main.js": "/camp-hortenfestival/static/js/runtime-main.26990bfc.js",
     "runtime-main.js.map": "/camp-hortenfestival/static/js/runtime-main.26990bfc.js.map",
-    "static/js/2.d48c1526.chunk.js": "/camp-hortenfestival/static/js/2.d48c1526.chunk.js",
-    "static/js/2.d48c1526.chunk.js.map": "/camp-hortenfestival/static/js/2.d48c1526.chunk.js.map",
+    "static/js/2.d50f417c.chunk.js": "/camp-hortenfestival/static/js/2.d50f417c.chunk.js",
+    "static/js/2.d50f417c.chunk.js.map": "/camp-hortenfestival/static/js/2.d50f417c.chunk.js.map",
     "index.html": "/camp-hortenfestival/index.html",
-    "precache-manifest.7ee184d552487dda403d7f8dc2e285ee.js": "/camp-hortenfestival/precache-manifest.7ee184d552487dda403d7f8dc2e285ee.js",
+    "precache-manifest.88716b2a7ddaedd2e4490bde92a83fdc.js": "/camp-hortenfestival/precache-manifest.88716b2a7ddaedd2e4490bde92a83fdc.js",
     "service-worker.js": "/camp-hortenfestival/service-worker.js",
     "static/css/main.34cb6852.chunk.css.map": "/camp-hortenfestival/static/css/main.34cb6852.chunk.css.map",
-    "static/js/2.d48c1526.chunk.js.LICENSE.txt": "/camp-hortenfestival/static/js/2.d48c1526.chunk.js.LICENSE.txt",
+    "static/js/2.d50f417c.chunk.js.LICENSE.txt": "/camp-hortenfestival/static/js/2.d50f417c.chunk.js.LICENSE.txt",
     "static/media/andre-etasje.svg": "/camp-hortenfestival/static/media/andre-etasje.3d06331f.svg",
     "static/media/camp-hortenfestival.svg": "/camp-hortenfestival/static/media/camp-hortenfestival.2a97b4a7.svg",
     "static/media/forste-etasje.svg": "/camp-hortenfestival/static/media/forste-etasje.ec3cd620.svg",
@@ -22,8 +22,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.26990bfc.js",
-    "static/js/2.d48c1526.chunk.js",
+    "static/js/2.d50f417c.chunk.js",
     "static/css/main.34cb6852.chunk.css",
-    "static/js/main.0404628a.chunk.js"
+    "static/js/main.1a7b05d2.chunk.js"
   ]
 }
