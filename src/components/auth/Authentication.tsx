@@ -3,6 +3,7 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import { useHistory } from 'react-router';
 import Spinner from '../spinner/Spinner';
+import { RouteName } from '../../index';
 
 const firebaseNotInitialized = firebase.apps.length === 0;
 if (firebaseNotInitialized) {
@@ -54,7 +55,7 @@ const AuthenticationProvider: React.FC = ({ children }) => {
     }
 
     if (!authentication.isLoading && !authentication.user) {
-        history.push('login');
+        history.push(RouteName.Login);
         return null;
     }
 

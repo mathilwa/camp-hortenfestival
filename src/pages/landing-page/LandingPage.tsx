@@ -10,6 +10,7 @@ import romfordelingLogo from '../../components/romoversikt/icons/romfordeling-lo
 import { useAuthentication, withAuthentication } from '../../components/auth/Authentication';
 import Logo from '../../components/logo/Logo';
 import { withRouter, useHistory } from 'react-router-dom';
+import { RouteName } from '../../index';
 
 const LandingPage = () => {
     const [mousePosition, setMousePosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
@@ -48,13 +49,7 @@ const LandingPage = () => {
 
     return (
         <div className={css.app}>
-            <header
-                className={css.appHeader}
-                onClick={() => {
-                    history.push('deg');
-                    console.log('skjer a?');
-                }}
-            >
+            <header className={css.appHeader} onClick={() => history.push(RouteName.Deg)}>
                 <p className={css.userName}>{userName ? `Hei, ${userName}!` : 'Hei!'} </p>
                 <img src={matta} className={css.spinningUser} alt="logo" />
             </header>

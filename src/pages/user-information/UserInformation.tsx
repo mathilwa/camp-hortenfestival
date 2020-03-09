@@ -5,6 +5,7 @@ import InputForm from '../../components/input-form/InputForm';
 import css from './user-information.less';
 import { useAuthentication, withAuthentication } from '../../components/auth/Authentication';
 import { useHistory } from 'react-router-dom';
+import { RouteName } from '../../index';
 
 const UserInformation: React.FC = () => {
     const { user } = useAuthentication();
@@ -18,7 +19,7 @@ const UserInformation: React.FC = () => {
             displayName: name,
         });
 
-        history.push('/');
+        history.push(RouteName.Hjem);
     };
 
     return (

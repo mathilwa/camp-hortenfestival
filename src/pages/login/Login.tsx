@@ -6,6 +6,7 @@ import Input from '../../components/input/Input';
 import Logo from '../../components/logo/Logo';
 import InputForm from '../../components/input-form/InputForm';
 import { useHistory } from 'react-router';
+import { RouteName } from '../../index';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -31,7 +32,7 @@ const Login = () => {
                     }
                 });
 
-            history.push('/');
+            history.push(RouteName.Hjem);
         }
     };
 
