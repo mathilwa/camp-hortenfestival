@@ -8,30 +8,16 @@ import andreEtasje from '../../components/romoversikt/icons/andre-etasje.svg';
 import forsteEtasje from '../../components/romoversikt/icons/forste-etasje.svg';
 import romfordelingLogo from '../../components/romoversikt/icons/romfordeling-logo.svg';
 import { useAuthentication, withAuthentication } from '../../components/auth/Authentication';
-import Login from '../../components/login/Login';
 import Logo from '../../components/logo/Logo';
-import UserInformation from '../../components/user-information/UserInformation';
+import { withRouter, useHistory } from 'react-router-dom';
 
 const LandingPage = () => {
     const [mousePosition, setMousePosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
     const { user, signOut } = useAuthentication();
-
-    if (!user) {
-        return <Login />;
-    }
-
-    if (user) {
-        let displayName;
-        user.providerData.forEach(information => {
-            displayName = information!.displayName;
-        });
-
-        if (!displayName) {
-            return <UserInformation user={user} />;
-        }
-    }
+    const history = useHistory();
 
     const onMouseMove = (event: any) => {
+        event.preventDefault();
         setMousePosition({ x: event.pageX, y: event.pageY });
     };
 
@@ -58,13 +44,22 @@ const LandingPage = () => {
         signOut().then(() => console.log('Du er logget ut'));
     };
 
+    const userName = user && user.providerData[0] && user.providerData[0].displayName;
+
     return (
-        <div className={css.app} onMouseMove={onMouseMove} onClick={launceConfetti}>
-            <header className={css.appHeader}>
+        <div className={css.app}>
+            <header
+                className={css.appHeader}
+                onClick={() => {
+                    history.push('deg');
+                    console.log('skjer a?');
+                }}
+            >
+                <p className={css.userName}>{userName ? `Hei, ${userName}!` : 'Hei!'} </p>
                 <img src={matta} className={css.spinningUser} alt="logo" />
             </header>
 
-            <div className={css.landingPageTop}>
+            <div className={css.landingPageTop} onClick={launceConfetti} onMouseMove={onMouseMove}>
                 <img
                     src={unicorn}
                     className={classNames(css.unicorn, { [css.unicornMobile]: isTochDevice })}
@@ -88,4 +83,4 @@ const LandingPage = () => {
     );
 };
 
-export default withAuthentication(LandingPage);
+export default withRouter(withAuthentication(LandingPage));

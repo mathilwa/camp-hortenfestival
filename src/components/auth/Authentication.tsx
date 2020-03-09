@@ -1,6 +1,8 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import firebase from 'firebase/app';
 import 'firebase/auth';
+import { useHistory } from 'react-router';
+import Spinner from '../spinner/Spinner';
 
 const firebaseNotInitialized = firebase.apps.length === 0;
 if (firebaseNotInitialized) {
@@ -33,15 +35,28 @@ const AuthenticationProvider: React.FC = ({ children }) => {
         signOut: () => firebase.auth().signOut(),
     });
 
+    const history = useHistory();
+
     useEffect(() => {
-        firebase.auth().onAuthStateChanged(newUser => {
-            setAuthentication({
-                ...authentication,
+        const unsubscribe = firebase.auth().onAuthStateChanged(newUser => {
+            setAuthentication(prevAuth => ({
+                ...prevAuth,
                 user: newUser,
                 isLoading: false,
-            });
+            }));
         });
-    }, [authentication]);
+
+        return unsubscribe;
+    }, []);
+
+    if (authentication.isLoading) {
+        return <Spinner />;
+    }
+
+    if (!authentication.isLoading && !authentication.user) {
+        history.push('login');
+        return null;
+    }
 
     return <AuthenticationContext.Provider value={authentication}>{children}</AuthenticationContext.Provider>;
 };

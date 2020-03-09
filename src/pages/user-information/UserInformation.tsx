@@ -1,20 +1,24 @@
 import React, { useState } from 'react';
-import firebase from 'firebase/app';
 import 'firebase/auth';
-import Input from '../input/Input';
-import InputForm from '../input-form/InputForm';
+import Input from '../../components/input/Input';
+import InputForm from '../../components/input-form/InputForm';
 import css from './user-information.less';
+import { useAuthentication, withAuthentication } from '../../components/auth/Authentication';
+import { useHistory } from 'react-router-dom';
 
-interface Props {
-    user: firebase.User;
-}
+const UserInformation: React.FC = () => {
+    const { user } = useAuthentication();
+    const history = useHistory();
+    const [name, setName] = useState<string>(
+        user && user.providerData[0] && user.providerData[0].displayName ? user.providerData[0].displayName : '',
+    );
 
-const UserInformation: React.FC<Props> = ({ user }) => {
-    const [name, setName] = useState<string>('');
     const updateUser = async () => {
-        await user.updateProfile({
+        await user!.updateProfile({
             displayName: name,
         });
+
+        history.push('/');
     };
 
     return (
@@ -34,4 +38,4 @@ const UserInformation: React.FC<Props> = ({ user }) => {
     );
 };
 
-export default UserInformation;
+export default withAuthentication(UserInformation);

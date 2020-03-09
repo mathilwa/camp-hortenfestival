@@ -2,9 +2,10 @@ import React, { FormEvent, useState } from 'react';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import css from './login.less';
-import Input from '../input/Input';
-import Logo from '../logo/Logo';
-import InputForm from '../input-form/InputForm';
+import Input from '../../components/input/Input';
+import Logo from '../../components/logo/Logo';
+import InputForm from '../../components/input-form/InputForm';
+import { useHistory } from 'react-router';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -13,11 +14,13 @@ const Login = () => {
     const [errorMessage, setErrorMessage] = useState('');
     const isValidInput = email && password;
 
-    const handleSubmit = (event: FormEvent) => {
+    const history = useHistory();
+
+    const handleSubmit = async (event: FormEvent) => {
         event.preventDefault();
 
         if (isValidInput) {
-            firebase
+            await firebase
                 .auth()
                 .signInWithEmailAndPassword(email, password)
                 .catch((error: firebase.auth.Error) => {
@@ -27,6 +30,8 @@ const Login = () => {
                         setErrorMessage('Her gikk noe galt. Prøv igjen eller ta kontakt med support.');
                     }
                 });
+
+            history.push('/');
         }
     };
 
