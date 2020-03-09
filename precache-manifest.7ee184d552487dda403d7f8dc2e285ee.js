@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2c01a3486462d5fa81ccf6c36de6d68b",
+    "revision": "575ca4aa6baba16f422ea520175dd479",
     "url": "/camp-hortenfestival/index.html"
   },
   {
-    "revision": "420fe1701994da18f54d",
-    "url": "/camp-hortenfestival/static/css/main.831c3416.chunk.css"
+    "revision": "aaacc6b75a9250f95bcf",
+    "url": "/camp-hortenfestival/static/css/main.34cb6852.chunk.css"
   },
   {
-    "revision": "c75714fb05f06991eda1",
-    "url": "/camp-hortenfestival/static/js/2.f045b3b1.chunk.js"
+    "revision": "c292ff93905fa78e2a57",
+    "url": "/camp-hortenfestival/static/js/2.d48c1526.chunk.js"
   },
   {
-    "revision": "dbe5d3b2170f4eb39caefbd6dab6381c",
-    "url": "/camp-hortenfestival/static/js/2.f045b3b1.chunk.js.LICENSE.txt"
+    "revision": "46b0fb03a333f6bc4e4cc19a524111b5",
+    "url": "/camp-hortenfestival/static/js/2.d48c1526.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "420fe1701994da18f54d",
-    "url": "/camp-hortenfestival/static/js/main.19a742df.chunk.js"
+    "revision": "aaacc6b75a9250f95bcf",
+    "url": "/camp-hortenfestival/static/js/main.0404628a.chunk.js"
   },
   {
     "revision": "785806add72f32c0bf76",
@@ -42,6 +42,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a73f185c9325985fc2492211152fd9d9",
     "url": "/camp-hortenfestival/static/media/romfordeling-logo.a73f185c.svg"
+  },
+  {
+    "revision": "3725c7c1dc874b7484ea5cbf06753905",
+    "url": "/camp-hortenfestival/static/media/unicorn-spinner.3725c7c1.svg"
   },
   {
     "revision": "c53a49bb0b79529f7c8e66d76b148524",
