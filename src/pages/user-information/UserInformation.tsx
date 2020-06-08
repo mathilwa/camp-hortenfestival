@@ -1,41 +1,52 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import 'firebase/auth';
 import Input from '../../components/input/Input';
 import InputForm from '../../components/input-form/InputForm';
 import css from './user-information.less';
-import { useAuthentication, withAuthentication } from '../../components/auth/Authentication';
+import { useAuthentication, withAuthentication, useUserDatabase } from '../../components/auth/Authentication';
 import { useHistory } from 'react-router-dom';
 import { RouteName } from '../../index';
+import Menu from '../../components/menu/Menu';
+import App from '../../components/app/App';
 
 const UserInformation: React.FC = () => {
-    const { user } = useAuthentication();
+    const { authenticatedUser, loggedInUser } = useAuthentication();
+
+    // @ts-ignore
+    const { database } = useUserDatabase();
     const history = useHistory();
-    const [name, setName] = useState<string>(
-        user && user.providerData[0] && user.providerData[0].displayName ? user.providerData[0].displayName : '',
-    );
+    const [name, setName] = useState<string>('');
+
+    useEffect(() => {
+        setName(loggedInUser.name);
+    }, [loggedInUser]);
 
     const updateUser = async () => {
-        await user!.updateProfile({
-            displayName: name,
-        });
+        database
+            .doc(name)
+            .set(authenticatedUser!.uid)
+            .data({ name });
 
         history.push(RouteName.Hjem);
     };
 
     return (
-        <div className={css.container}>
+        <App>
+            <Menu loggedInUser={loggedInUser} />
             <div className={css.headingContainer}>
                 <h1 className={css.heading}>Du! Ja du, ja.</h1>
-                <p>Du må fylle ut litt informasjon om deg selv</p>
+                <p>Vil du endre noe info om deg sjæl? Kjør på!</p>
             </div>
-            <InputForm onSubmit={updateUser} buttonLabel="Nok om meg">
-                <Input
-                    onChange={event => setName(event.target.value)}
-                    placeholder="Hva heter du a?"
-                    value={name}
-                />
-            </InputForm>
-        </div>
+            <div className={css.inputContainer}>
+                <InputForm onSubmit={updateUser} buttonLabel="Nok om meg">
+                    <Input
+                        onChange={event => setName(event.target.value)}
+                        placeholder="Hva heter du a?"
+                        value={name}
+                    />
+                </InputForm>
+            </div>
+        </App>
     );
 };
 

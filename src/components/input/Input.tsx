@@ -3,7 +3,7 @@ import css from './input.less';
 
 interface Props {
     placeholder: string;
-    value: string;
+    value: string | undefined;
     onChange: (event: any) => void;
     type?: string;
 }

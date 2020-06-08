@@ -5,21 +5,27 @@ import { HashRouter, Route } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 import UserInformation from './pages/user-information/UserInformation';
 import Login from './pages/login/Login';
-import LandingPageWrapper from './pages/landing-page/LandingPageWrapper';
+import LandingPage from './pages/landing-page/LandingPage';
+import HouseOverview from './pages/house-overview/HouseOverview';
+import Pakkeliste from './pages/Pakkeliste/Pakkeliste';
 
 export enum RouteName {
     Hjem = '/',
     CampHortenFestival = '/camp-hortenfestival',
     Deg = '/deg',
     Login = '/login',
+    Huset = '/huset',
+    TaMed = '/ta-med',
 }
 
 ReactDOM.render(
     <HashRouter>
-        <Route exact path={RouteName.Hjem} component={LandingPageWrapper} />
-        <Route path={RouteName.CampHortenFestival} component={LandingPageWrapper} />
+        <Route exact path={RouteName.Hjem} component={LandingPage} />
+        <Route path={RouteName.CampHortenFestival} component={LandingPage} />
         <Route path={RouteName.Deg} component={UserInformation} />
         <Route path={RouteName.Login} component={Login} />
+        <Route path={RouteName.Huset} component={HouseOverview} />
+        <Route path={RouteName.TaMed} component={Pakkeliste} />
     </HashRouter>,
     document.getElementById('root'),
 );

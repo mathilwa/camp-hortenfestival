@@ -1,0 +1,58 @@
+.appHeader {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.appHeader .spinningUser {
+    height: 40px;
+    pointer-events: none;
+}
+
+.menuLogo {
+    height: 60px;
+    cursor: pointer;
+}
+
+.menuUserInformation {
+    display: flex;
+    align-items: center;
+}
+
+.userName {
+    color: white;
+    margin: 0;
+    margin-right: 20px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+
+@media screen and (min-width: 770px) {
+    .appHeader {
+        padding: 40px;
+    }
+
+    .appHeader .spinningUser {
+        height: 60px;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .spinningUser {
+        animation: App-logo-spin infinite 3s linear;
+    }
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

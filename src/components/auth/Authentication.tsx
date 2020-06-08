@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import firebase from 'firebase/app';
+import * as firebase from 'firebase/app';
 import 'firebase/auth';
+import 'firebase/firestore';
 import { useHistory } from 'react-router';
 import Spinner from '../spinner/Spinner';
 import { RouteName } from '../../index';
@@ -15,23 +16,31 @@ if (firebaseNotInitialized) {
         storageBucket: 'camp-hortenfestvial.appspot.com',
         messagingSenderId: '32123979841',
         appId: '1:32123979841:web:c321a59f4a94a047d19ec0',
-        measurementId: 'G-TC8JQDP77T',
     };
 
     firebase.initializeApp(firebaseConfig);
 }
 
+let database: firebase.firestore.Firestore | null;
+
 interface Authentication {
-    user: firebase.User | null;
+    authenticatedUser: firebase.User | null;
+    loggedInUser: LoggedInUser;
     isLoading: boolean;
     signOut: () => Promise<void>;
+}
+
+export interface LoggedInUser {
+    name: string;
+    icon: string;
 }
 
 const AuthenticationContext = createContext<Authentication | null>(null);
 
 const AuthenticationProvider: React.FC = ({ children }) => {
     const [authentication, setAuthentication] = useState<Authentication>({
-        user: firebase.auth().currentUser,
+        authenticatedUser: firebase.auth().currentUser,
+        loggedInUser: { name: '', icon: '' },
         isLoading: true,
         signOut: () => firebase.auth().signOut(),
     });
@@ -42,7 +51,7 @@ const AuthenticationProvider: React.FC = ({ children }) => {
         const unsubscribe = firebase.auth().onAuthStateChanged(newUser => {
             setAuthentication(prevAuth => ({
                 ...prevAuth,
-                user: newUser,
+                authenticatedUser: newUser,
                 isLoading: false,
             }));
         });
@@ -50,11 +59,27 @@ const AuthenticationProvider: React.FC = ({ children }) => {
         return unsubscribe;
     }, []);
 
+    useEffect(() => {
+        if (!database) {
+            database = firebase.firestore();
+        }
+
+        if (authentication.authenticatedUser) {
+            database
+                .collection('users')
+                .doc(authentication.authenticatedUser.uid)
+                .onSnapshot(doc => {
+                    const user = doc.data() as LoggedInUser;
+                    setAuthentication(prevState => ({ ...prevState, loggedInUser: user }));
+                });
+        }
+    }, [authentication.authenticatedUser]);
+
     if (authentication.isLoading) {
         return <Spinner />;
     }
 
-    if (!authentication.isLoading && !authentication.user) {
+    if (!authentication.isLoading && !authentication.authenticatedUser) {
         history.push(RouteName.Login);
         return null;
     }
@@ -68,6 +93,10 @@ export const useAuthentication = (): Authentication => {
         throw new Error('useAuthentication can only be used within an AuthenticationProvider');
     }
     return authentication;
+};
+
+export const useUserDatabase = (): firebase.firestore.CollectionReference<firebase.firestore.DocumentData> => {
+    return firebase.firestore().collection('users');
 };
 
 export const withAuthentication = function withAuthenticationWrapper<T>(
