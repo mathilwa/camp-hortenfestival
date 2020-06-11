@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "273743364bd3cadc435f5bd506468c2b",
+    "revision": "0bc57eb19fe14ebaafb941d6d1858fc8",
     "url": "/index.html"
   },
   {
-    "revision": "acd5c7e0603e4a8e2081",
-    "url": "/static/css/main.9e8e6164.chunk.css"
+    "revision": "bc5dda5bff9a03b4e27c",
+    "url": "/static/css/main.fe9a8d40.chunk.css"
   },
   {
-    "revision": "a22eb83dd377ffb1e744",
-    "url": "/static/js/2.0d435130.chunk.js"
+    "revision": "bb68cc99663acbc4539f",
+    "url": "/static/js/2.a7d5e063.chunk.js"
   },
   {
     "revision": "55cbd54242e5f05163b329a995cd8626",
-    "url": "/static/js/2.0d435130.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.a7d5e063.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "acd5c7e0603e4a8e2081",
-    "url": "/static/js/main.14e4a14d.chunk.js"
+    "revision": "bc5dda5bff9a03b4e27c",
+    "url": "/static/js/main.2275c75c.chunk.js"
   },
   {
     "revision": "07dda04c2f16d1e62122",
@@ -28,8 +28,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/andre-etasje.3d06331f.svg"
   },
   {
-    "revision": "2a97b4a7a824ab0c88b693e141ee105a",
-    "url": "/static/media/camp-hortenfestival.2a97b4a7.svg"
+    "revision": "a96101b59a1b38db7a547597c961e729",
+    "url": "/static/media/ch.a96101b5.png"
   },
   {
     "revision": "5528c32728460161e82643839bcf48f7",
