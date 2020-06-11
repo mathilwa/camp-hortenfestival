@@ -31,7 +31,7 @@ const Menu: React.FC<Props> = ({ loggedInUser }) => {
             <div className={css.menuHeading} onClick={() => history.push(RouteName.Hjem)}>
                 <img className={css.menuLogo} src={unicorn} alt="hjem" />
                 <span className={css.festivalName}>CAMP HORTENFESTIVAL</span>
-                <span className={css.festivalDates}>18. - 21. JUNI</span>
+                <span className={css.festivalDates}>19. - 21. JUNI</span>
             </div>
             <div className={css.menuUserInformation} onClick={() => history.push(RouteName.Deg)}>
                 <p className={css.userName}>{loggedInUser.name ? `Hei, ${loggedInUser.name}!` : 'Hei!'} </p>
