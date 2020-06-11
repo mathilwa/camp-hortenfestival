@@ -15,7 +15,7 @@
 }
 
 .menuLogo {
-    height: 60px;
+    height: 40px;
     margin-right: 10px;
 }
 
@@ -24,17 +24,17 @@
     align-items: center;
     font-family: 'Source Sans Pro';
     font-weight: bold;
-    font-size: 2rem;
     cursor: pointer;
 }
 
 .festivalName {
     color: white;
     margin-right: 10px;
+    font-size: 1rem;
 }
 
 .festivalDates {
-color: #F36F8E
+    display: none;
 }
 
 .menuUserInformation {
@@ -43,13 +43,21 @@ color: #F36F8E
 }
 
 .userName {
-    color: white;
-    margin: 0;
-    margin-right: 20px;
-    letter-spacing: 1px;
-    font-weight: 400;
+    display: none;
 }
 
+@media screen and (min-width: 600px) {
+    .festivalDates {
+        display: block;
+        color: #F36F8E;
+        font-size: 1rem;
+        align-self: flex-end;
+    }
+
+    .festivalName {
+        font-size: 2rem;
+    }
+}
 
 @media screen and (min-width: 770px) {
     .appHeader {
@@ -58,6 +66,26 @@ color: #F36F8E
 
     .appHeader .spinningUser {
         height: 60px;
+    }
+
+    .menuLogo {
+        height: 60px;
+    }
+
+    .festivalDates {
+        font-size: 2rem;
+        align-self: center;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .userName {
+        display: block;
+        color: white;
+        margin: 0;
+        margin-right: 20px;
+        letter-spacing: 1px;
+        font-weight: 400;
     }
 }
 

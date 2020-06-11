@@ -2,7 +2,7 @@
   "name": "camp-hortenfestival",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://mathilwa.github.io/camp-hortenfestival/",
+  "homepage": "https://camphortenfestival.no/",
   "scripts": {
     "start": "craco start",
     "build": "craco build",
