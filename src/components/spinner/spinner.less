@@ -1,3 +1,8 @@
+.spinnerContainer {
+    width: 80%;
+    margin: 0 auto;
+}
+
 .spinner {
     padding-top: 10rem;
     color: white;
@@ -7,13 +12,30 @@
 }
 
 .spinner img {
-    height: 15rem;
+    height: 10rem;
     margin-bottom: 5rem;
     animation: spinUnicorn 1.5s infinite linear;
 }
 
 .spinnerText {
+    font-size: 1rem;
     margin-right: 5px;
+}
+
+@media screen and (min-width: 500px) {
+    .spinnerText {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .spinner img {
+        height: 15rem;
+    }
+
+    .spinnerText {
+        font-size: inherit;
+    }
 }
 
 .spinnerTextContainer .dot {
@@ -51,3 +73,5 @@
         opacity: 0.2;
     }
 }
+
+

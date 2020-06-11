@@ -12,7 +12,7 @@
 }
 
 .taMed, .ikkeTaMed {
-  padding: 0 2rem;
+  padding: 0 1rem;
   font-weight: 200;
 }
 
@@ -21,7 +21,7 @@
 }
 
 .pakkeliste {
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
 
@@ -42,21 +42,28 @@
 
 .pakkelisteHeading {
   margin-bottom: 1rem;
-  padding-right: 2rem;
-  padding-left: 2rem;
+  padding: 0 1rem;
   color: #F36F8E;
+}
+
+@media screen and (min-width: 500px) {
+  .pakkelisteHeading {
+    padding: 0 2rem;
+  }
+
+  .taMed, .ikkeTaMed {
+    padding: 0 2rem;
+  }
 }
 
 @media screen and (min-width: 600px) {
   .pakkeliste {
-    font-size: 2rem
+    font-size: 2rem;
   }
 }
 
-@media screen and (min-width: 770px) {
-
-}
-
 @media screen and (min-width: 900px) {
-
+  .pakkeliste {
+    width: 60%;
+  }
 }

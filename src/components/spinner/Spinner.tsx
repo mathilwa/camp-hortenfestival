@@ -4,6 +4,7 @@ import React from 'react';
 
 const Spinner = () => {
     return (
+        <div className={css.spinnerContainer}>
         <div className={css.spinner}>
             <img src={unicornspinner} alt="spinning-unicorn" />
             <h1 className={css.spinnerTextContainer}>
@@ -12,6 +13,7 @@ const Spinner = () => {
                 <span className={css.dot}>.</span>
                 <span className={css.dot}>.</span>
             </h1>
+        </div>
         </div>
     );
 };
