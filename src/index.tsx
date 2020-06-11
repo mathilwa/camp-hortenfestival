@@ -8,6 +8,7 @@ import Login from './pages/login/Login';
 import LandingPage from './pages/landing-page/LandingPage';
 import HouseOverview from './pages/house-overview/HouseOverview';
 import Pakkeliste from './pages/pakkeliste/Pakkeliste';
+import PracticalInformation from './pages/practal-information/PracticalInformation';
 
 export enum RouteName {
     Hjem = '/',
@@ -15,6 +16,7 @@ export enum RouteName {
     Deg = '/deg',
     Login = '/login',
     Huset = '/huset',
+    PraktiskInfo = '/praktisk',
     TaMed = '/ta-med',
 }
 
@@ -26,6 +28,7 @@ ReactDOM.render(
         <Route path={RouteName.Login} component={Login} />
         <Route path={RouteName.Huset} component={HouseOverview} />
         <Route path={RouteName.TaMed} component={Pakkeliste} />
+        <Route path={RouteName.PraktiskInfo} component={PracticalInformation} />
     </HashRouter>,
     document.getElementById('root'),
 );

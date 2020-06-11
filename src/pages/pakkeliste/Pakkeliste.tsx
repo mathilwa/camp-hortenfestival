@@ -28,6 +28,7 @@ const Pakkeliste = () => (
                 <div className={css.ikkeTaMed}>
                     <div>Mat</div>
                     <div>Drikke</div>
+                    <div>Antibac</div>
                     <div>Solkrem</div>
                     <div>Håndklær</div>
                     <div>Sengetøy</div>

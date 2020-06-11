@@ -27,7 +27,7 @@ const LandingPage = () => {
 
                 <div
                     className={classNames(css.menuBlock, css.practicalInfo)}
-                    onClick={() => history.push(RouteName.TaMed)}
+                    onClick={() => history.push(RouteName.PraktiskInfo)}
                 >
                     PRAKTISK INFO
                 </div>

@@ -28,13 +28,8 @@ const Menu: React.FC<Props> = ({ loggedInUser }) => {
 
     return (
         <header className={css.appHeader}>
-            <div className={css.menuHeading}>
-                <img
-                    className={css.menuLogo}
-                    src={unicorn}
-                    alt="hjem"
-                    onClick={() => history.push(RouteName.Hjem)}
-                />
+            <div className={css.menuHeading} onClick={() => history.push(RouteName.Hjem)}>
+                <img className={css.menuLogo} src={unicorn} alt="hjem" />
                 <span className={css.festivalName}>CAMP HORTENFESTIVAL</span>
                 <span className={css.festivalDates}>18. - 21. JUNI</span>
             </div>
