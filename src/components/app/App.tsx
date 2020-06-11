@@ -5,9 +5,10 @@ import css from './app.less';
 import { useAuthentication, withAuthentication } from '../auth/Authentication';
 import Spinner from '../spinner/Spinner';
 import confetti from 'canvas-confetti';
+import Menu from '../menu/Menu';
 
 const App: React.FC = ({ children }) => {
-    const { isLoading } = useAuthentication();
+    const { isLoading, loggedInUser } = useAuthentication();
 
     const [mousePosition, setMousePosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
 
@@ -40,7 +41,8 @@ const App: React.FC = ({ children }) => {
     };
 
     return (
-        <div className={css.app} onClick={launceConfetti}  onMouseMove={onMouseMove}>
+        <div className={css.app} onClick={launceConfetti} onMouseMove={onMouseMove}>
+            <Menu loggedInUser={loggedInUser} />
             {children}
         </div>
     );

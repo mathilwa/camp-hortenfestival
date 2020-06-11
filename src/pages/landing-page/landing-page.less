@@ -37,15 +37,18 @@
 }
 
 .menuBlocks {
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
+    padding: 5rem;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    font-family: 'Source Sans Pro';
+    font-weight: bold;
 }
 
 .menuBlock {
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 300px;
     font-size: 2rem;
     color: white;
     cursor: pointer;
@@ -53,7 +56,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all .2s ease-in-out
+    transition: all .2s ease-in-out;
 }
 
 .menuBlock:hover {
@@ -66,7 +69,21 @@
 
 .pakkeListe {
     background-color: #FFEED3;
+}
+
+.practicalInfo {
+    background-color: #D1F9F2;
+}
+
+.menuBlock:nth-child(2) {
     align-self: flex-end;
+    position: relative;
+    top: -50px;
+}
+
+.menuBlock:nth-child(3) {
+    position: relative;
+    top: -50px;
 }
 
 @keyframes moveUnicorn {

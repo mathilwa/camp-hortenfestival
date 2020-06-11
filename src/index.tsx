@@ -7,7 +7,7 @@ import UserInformation from './pages/user-information/UserInformation';
 import Login from './pages/login/Login';
 import LandingPage from './pages/landing-page/LandingPage';
 import HouseOverview from './pages/house-overview/HouseOverview';
-import Pakkeliste from './pages/Pakkeliste/Pakkeliste';
+import Pakkeliste from './pages/pakkeliste/Pakkeliste';
 
 export enum RouteName {
     Hjem = '/',

@@ -28,7 +28,16 @@ const Menu: React.FC<Props> = ({ loggedInUser }) => {
 
     return (
         <header className={css.appHeader}>
-            <img className={css.menuLogo} src={unicorn} alt="hjem" onClick={() => history.push(RouteName.Hjem)} />
+            <div className={css.menuHeading}>
+                <img
+                    className={css.menuLogo}
+                    src={unicorn}
+                    alt="hjem"
+                    onClick={() => history.push(RouteName.Hjem)}
+                />
+                <span className={css.festivalName}>CAMP HORTENFESTIVAL</span>
+                <span className={css.festivalDates}>18. - 21. JUNI</span>
+            </div>
             <div className={css.menuUserInformation} onClick={() => history.push(RouteName.Deg)}>
                 <p className={css.userName}>{loggedInUser.name ? `Hei, ${loggedInUser.name}!` : 'Hei!'} </p>
                 <img src={iconForLoggedInUser} className={css.spinningUser} alt="logo" />

@@ -10,7 +10,7 @@ import Menu from '../../components/menu/Menu';
 import App from '../../components/app/App';
 
 const UserInformation: React.FC = () => {
-    const { authenticatedUser, loggedInUser } = useAuthentication();
+    const { authenticatedUser, loggedInUser, signOut } = useAuthentication();
 
     // @ts-ignore
     const { database } = useUserDatabase();
@@ -46,6 +46,8 @@ const UserInformation: React.FC = () => {
                     />
                 </InputForm>
             </div>
+
+            <button onClick={signOut}>Logg ut</button>
         </App>
     );
 };
