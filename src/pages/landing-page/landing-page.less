@@ -6,57 +6,28 @@
     font-weight: bold;
 }
 
-.unicorn {
-    position: absolute;
-    height: 150px;
-    transform: translateX(-145px);
-}
-
-.unicorn.unicornMobile {
-    height: 15rem;
-    animation: moveUnicorn 4s infinite linear;
-}
-
-.landingPageTop {
-    margin-bottom: 8rem;
-}
-
-.romoversikt {
-    padding: 0 1rem;
-}
-
-.romfordelingHeading {
-    margin: 0 auto;
-    display: flex;
-    margin-bottom: 3rem;
-}
-
-.etasje {
-    margin-bottom: 10rem;
-    width: 100%;
-}
-
 .menuBlocks {
-    width: 50%;
-    margin: 0 auto;
-    padding: 5rem;
-    display: flex;
-    flex-direction: column;
+    padding: 3rem;
     font-family: 'Source Sans Pro';
     font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .menuBlock {
-    height: 250px;
-    width: 300px;
-    font-size: 2rem;
+    height: 150px;
+    font-size: 1.5rem;
     color: white;
     cursor: pointer;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-shadow: -0.8px 0 black, 0 0.8px black, 0.8px 0 black, 0 -0.8px black;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all .2s ease-in-out;
+    margin-bottom: 2rem;
+    max-width: 400px;
+    width: 100%;
 }
 
 .menuBlock:hover {
@@ -73,17 +44,6 @@
 
 .practicalInfo {
     background-color: #D1F9F2;
-}
-
-.menuBlock:nth-child(2) {
-    align-self: flex-end;
-    position: relative;
-    top: -50px;
-}
-
-.menuBlock:nth-child(3) {
-    position: relative;
-    top: -50px;
 }
 
 @keyframes moveUnicorn {
@@ -165,5 +125,70 @@
     }
     to {
         transform: rotate(360deg);
+    }
+}
+
+@media screen and (min-width: 840px) {
+    .menuBlocks {
+        padding: 5rem;
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: initial;
+    }
+
+    .menuBlock {
+        height: 250px;
+        font-size: 2rem;
+        width: 300px;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+
+    .menuBlock:hover {
+        transform: scale(1.05);
+    }
+
+    .houseOverview {
+        background-color: #FFCCD8;
+    }
+
+    .pakkeListe {
+        background-color: #FFEED3;
+    }
+
+    .practicalInfo {
+        background-color: #D1F9F2;
+    }
+
+    .menuBlock:nth-child(2) {
+        align-self: flex-end;
+        position: relative;
+        top: -50px;
+    }
+
+    .menuBlock:nth-child(3) {
+        position: relative;
+        top: -50px;
+        left: 30px
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+    .menuBlocks {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .menuBlocks {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .menuBlocks {
+        width: 50%;
     }
 }
