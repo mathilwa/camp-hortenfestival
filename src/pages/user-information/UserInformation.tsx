@@ -6,7 +6,6 @@ import css from './user-information.less';
 import { useAuthentication, withAuthentication, useUserDatabase } from '../../components/auth/Authentication';
 import { useHistory } from 'react-router-dom';
 import { RouteName } from '../../index';
-import Menu from '../../components/menu/Menu';
 import App from '../../components/app/App';
 
 const UserInformation: React.FC = () => {
@@ -32,7 +31,6 @@ const UserInformation: React.FC = () => {
 
     return (
         <App>
-            <Menu loggedInUser={loggedInUser} />
             <div className={css.headingContainer}>
                 <h1 className={css.heading}>Du! Ja du, ja.</h1>
                 <p>Vil du endre noe info om deg sjæl? Kjør på!</p>

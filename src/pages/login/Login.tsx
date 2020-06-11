@@ -3,10 +3,10 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import css from './login.less';
 import Input from '../../components/input/Input';
-import Logo from '../../components/logo/Logo';
 import InputForm from '../../components/input-form/InputForm';
 import { useHistory } from 'react-router';
 import { RouteName } from '../../index';
+import Menu from '../../components/menu/Menu';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -38,7 +38,7 @@ const Login = () => {
 
     return (
         <div className={css.container}>
-            <Logo />
+            <Menu />
             <InputForm onSubmit={handleSubmit} errorMessage={errorMessage} buttonLabel="Here I come!">
                 <Input
                     value={email}

@@ -9,6 +9,7 @@ import kristian from './icons/kristian.png';
 import hege from './icons/hege.png';
 import matta from './icons/matta.png';
 import marlin from './icons/marlin.png';
+import camphorten from './icons/ch.png';
 import unicorn from './icons/unicorn.svg';
 import css from './menu.less';
 
@@ -17,14 +18,14 @@ import { RouteName } from '../../index';
 import { LoggedInUser } from '../auth/Authentication';
 
 interface Props {
-    loggedInUser: LoggedInUser;
+    loggedInUser?: LoggedInUser;
 }
 
 const Menu: React.FC<Props> = ({ loggedInUser }) => {
     const history = useHistory();
 
     const icons = [matta, nemanja, petter, theass, theahj, emilie, nicolai, kristian, hege, marlin];
-    const iconForLoggedInUser = icons.find(icon => icon.includes(loggedInUser.icon));
+    const iconForLoggedInUser = loggedInUser ? icons.find(icon => icon.includes(loggedInUser.icon)) : null;
 
     return (
         <header className={css.appHeader}>
@@ -33,10 +34,16 @@ const Menu: React.FC<Props> = ({ loggedInUser }) => {
                 <span className={css.festivalName}>CAMP HORTENFESTIVAL</span>
                 <span className={css.festivalDates}>19. - 21. JUNI</span>
             </div>
-            <div className={css.menuUserInformation} onClick={() => history.push(RouteName.Deg)}>
-                <p className={css.userName}>{loggedInUser.name ? `Hei, ${loggedInUser.name}!` : 'Hei!'} </p>
-                <img src={iconForLoggedInUser} className={css.spinningUser} alt="logo" />
-            </div>
+            {loggedInUser && (
+                <div className={css.menuUserInformation} onClick={() => history.push(RouteName.Deg)}>
+                    <p className={css.userName}>{loggedInUser.name ? `Hei, ${loggedInUser.name}!` : 'Hei!'} </p>
+                    <img
+                        src={iconForLoggedInUser ? iconForLoggedInUser : camphorten}
+                        className={css.spinningUser}
+                        alt="logo"
+                    />
+                </div>
+            )}
         </header>
     );
 };
