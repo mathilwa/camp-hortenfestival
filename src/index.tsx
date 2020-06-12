@@ -9,6 +9,7 @@ import LandingPage from './pages/landing-page/LandingPage';
 import HouseOverview from './pages/house-overview/HouseOverview';
 import Pakkeliste from './pages/pakkeliste/Pakkeliste';
 import PracticalInformation from './pages/practal-information/PracticalInformation';
+import Folka from './pages/folka/Folka';
 
 export enum RouteName {
     Hjem = '/',
@@ -18,6 +19,7 @@ export enum RouteName {
     Huset = '/huset',
     PraktiskInfo = '/praktisk',
     TaMed = '/ta-med',
+    Folka = '/folka',
 }
 
 ReactDOM.render(
@@ -29,6 +31,7 @@ ReactDOM.render(
         <Route path={RouteName.Huset} component={HouseOverview} />
         <Route path={RouteName.TaMed} component={Pakkeliste} />
         <Route path={RouteName.PraktiskInfo} component={PracticalInformation} />
+        <Route path={RouteName.Folka} component={Folka} />
     </HashRouter>,
     document.getElementById('root'),
 );

@@ -13,6 +13,12 @@ const LandingPage = () => {
         <App>
             <div className={css.menuBlocks}>
                 <div
+                    className={classNames(css.menuBlock, css.folka)}
+                    onClick={() => history.push(RouteName.Folka)}
+                >
+                    FOLKA
+                </div>
+                <div
                     className={classNames(css.menuBlock, css.pakkeListe)}
                     onClick={() => history.push(RouteName.TaMed)}
                 >
