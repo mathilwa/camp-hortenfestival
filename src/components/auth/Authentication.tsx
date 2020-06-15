@@ -33,6 +33,8 @@ interface Authentication {
 export interface LoggedInUser {
     name: string;
     icon: string;
+    favSong: string;
+    info: string;
 }
 
 const AuthenticationContext = createContext<Authentication | null>(null);
@@ -40,7 +42,7 @@ const AuthenticationContext = createContext<Authentication | null>(null);
 const AuthenticationProvider: React.FC = ({ children }) => {
     const [authentication, setAuthentication] = useState<Authentication>({
         authenticatedUser: firebase.auth().currentUser,
-        loggedInUser: { name: '', icon: '' },
+        loggedInUser: { name: '', icon: '', favSong: '', info: '' },
         isLoading: true,
         signOut: () => firebase.auth().signOut(),
     });

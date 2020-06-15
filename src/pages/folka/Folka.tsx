@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import nemanja from './icons/nemanja.png';
 import petter from './icons/petter.png';
 import theass from './icons/theass.png';
@@ -11,20 +11,50 @@ import matta from './icons/matta.png';
 import marlin from './icons/marlin.png';
 import css from './folka.less';
 import App from '../../components/app/App';
+import 'firebase/firestore';
+import firebase from 'firebase';
+import { useUserDatabase } from '../../components/auth/Authentication';
+
+interface Festivalmenneske {
+    name: string;
+    icon: string;
+    favSong: string;
+    info: string;
+}
+
+const getIcon = (iconDescriptionForUser: string) => {
+    const allIcons = [nemanja, kristian, nicolai, petter, emilie, theahj, theass, marlin, matta, hege];
+    const userIcon = allIcons.find(icon => icon.includes(iconDescriptionForUser));
+    return userIcon ? userIcon : '';
+};
 
 const Folka: React.FC = () => {
-    const folka = [
-        { name: 'Mathilde', icon: matta },
-        { name: 'Nemanja', icon: nemanja },
-        { name: 'Petter', icon: petter },
-        { name: 'Thea', icon: theass },
-        { name: 'Emilie', icon: emilie },
-        { name: 'Nicolai', icon: nicolai },
-        { name: 'Kristian', icon: kristian },
-        { name: 'Hege', icon: hege },
-        { name: 'Marlin', icon: marlin },
-        { name: 'Thea', icon: theahj },
-    ];
+    //  @ts-ignore
+    const { database } = useUserDatabase();
+    const [folka, setFolka] = useState<Festivalmenneske[]>([]);
+    useEffect(() => {
+        const getUsers = async () => {
+            const users = await firebase
+                .firestore()
+                .collection('users')
+                .get();
+
+            const liste: Festivalmenneske[] = [];
+
+            users.forEach(user => {
+                const festivalUser = user.data();
+                liste.push({
+                    name: festivalUser.name,
+                    favSong: festivalUser.favSong,
+                    icon: getIcon(festivalUser.icon),
+                    info: festivalUser.info,
+                });
+            });
+
+            setFolka(liste);
+        };
+        getUsers();
+    }, [database]);
 
     return (
         <App>
@@ -34,8 +64,7 @@ const Folka: React.FC = () => {
                         <img src={folk.icon} className={css.spinningUser} alt="logo" />
                         <div className={css.fakta}>
                             <div className={css.name}>{folk.name}</div>
-                            Dette er en lengre tekst om hver person. Om hvor de kommer fra. Hva de heter. Og en
-                            liten liste med funfacts
+                            <span>{folk.info}</span>
                         </div>
                     </div>
                 ))}
