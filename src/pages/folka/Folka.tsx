@@ -18,7 +18,8 @@ import { useUserDatabase } from '../../components/auth/Authentication';
 interface Festivalmenneske {
     name: string;
     icon: string;
-    favSong: string;
+    favSongTitle: string;
+    favSongLink: string;
     info: string;
 }
 
@@ -45,7 +46,8 @@ const Folka: React.FC = () => {
                 const festivalUser = user.data();
                 liste.push({
                     name: festivalUser.name,
-                    favSong: festivalUser.favSong,
+                    favSongTitle: festivalUser.favSongTitle,
+                    favSongLink: festivalUser.favSongLink,
                     icon: getIcon(festivalUser.icon),
                     info: festivalUser.info,
                 });
@@ -64,11 +66,17 @@ const Folka: React.FC = () => {
         <App>
             <div className={css.folkaContainer}>
                 {folkaSorted.map(festivaldeltaker => (
-                    <div className={css.folkInfo}>
+                    <div className={css.folkInfoContainer}>
                         <img src={festivaldeltaker.icon} className={css.spinningUser} alt="logo" />
                         <div className={css.fakta}>
                             <div className={css.name}>{festivaldeltaker.name}</div>
-                            <span>{festivaldeltaker.info}</span>
+                            <div className={css.info}>{festivaldeltaker.info}</div>
+                            {festivaldeltaker.favSongTitle && (
+                                <span className={css.song}>
+                                    Favorittsang om dagen:{' '}
+                                    <a href={festivaldeltaker.favSongLink}>{festivaldeltaker.favSongTitle}</a>
+                                </span>
+                            )}
                         </div>
                     </div>
                 ))}

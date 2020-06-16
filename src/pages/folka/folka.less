@@ -5,7 +5,7 @@
   flex-wrap: wrap;
 }
 
-.folkInfo {
+.folkInfoContainer {
   margin-bottom: 4rem;
   box-sizing: border-box;
   padding: 0 2rem;
@@ -23,6 +23,44 @@
   font-weight: bold;
   margin-bottom: 10px;
 }
+
+.info {
+  margin-bottom: 10px;
+}
+
+.song {
+  color: white;
+  display: inline-block;
+}
+
+.song a {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.song::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #F36F8E;
+}
+
+.song:hover::after {
+  width: 100%;
+  animation: underline-movement 0.7s ease-in-out;
+}
+
+@keyframes underline-movement {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
 
 .spinningUser {
   width: 150px;
@@ -46,7 +84,7 @@
     width: 60%;
   }
 
-  .folkInfo {
+  .folkInfoContainer {
     width: 50%;
     text-align: start;
   }
@@ -64,7 +102,7 @@
 
   }
 
-  .folkInfo {
+  .folkInfoContainer {
     width: 33%;
   }
 }
