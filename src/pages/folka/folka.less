@@ -1,20 +1,21 @@
 .folkaContainer {
-  width: 60%;
+  width: 90%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
 }
 
 .folkInfo {
-  width: 33%;
   margin-bottom: 4rem;
   box-sizing: border-box;
   padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .fakta {
   color: white;
-  text-align: end;
+  text-align: justify;
 }
 
 .name {
@@ -31,6 +32,43 @@
 .spinningUser:hover {
   animation: App-logo-spin infinite 3s linear;
 }
+
+
+
+@media screen and (min-width: 770px) {
+  .folkaContainer {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .folkaContainer {
+    width: 60%;
+  }
+
+  .folkInfo {
+    width: 50%;
+    text-align: start;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .folkaContainer {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .folkaContainer {
+    width: 60%;
+
+  }
+
+  .folkInfo {
+    width: 33%;
+  }
+}
+
 
 
 @keyframes App-logo-spin {

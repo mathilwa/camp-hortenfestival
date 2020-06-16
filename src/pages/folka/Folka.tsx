@@ -56,15 +56,19 @@ const Folka: React.FC = () => {
         getUsers();
     }, [database]);
 
+    const folkaSorted = folka.sort(
+        (festivaldeltakerA, festivaldeltakerB) => festivaldeltakerB.name.length - festivaldeltakerA.name.length,
+    );
+
     return (
         <App>
             <div className={css.folkaContainer}>
-                {folka.map(folk => (
+                {folkaSorted.map(festivaldeltaker => (
                     <div className={css.folkInfo}>
-                        <img src={folk.icon} className={css.spinningUser} alt="logo" />
+                        <img src={festivaldeltaker.icon} className={css.spinningUser} alt="logo" />
                         <div className={css.fakta}>
-                            <div className={css.name}>{folk.name}</div>
-                            <span>{folk.info}</span>
+                            <div className={css.name}>{festivaldeltaker.name}</div>
+                            <span>{festivaldeltaker.info}</span>
                         </div>
                     </div>
                 ))}
