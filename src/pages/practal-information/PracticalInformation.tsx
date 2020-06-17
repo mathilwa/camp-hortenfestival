@@ -6,14 +6,14 @@ import css from './practical-information.less';
 import { withRouter } from 'react-router';
 import { withAuthentication } from '../../components/auth/Authentication';
 import classNames from 'classnames';
+import InfoBlock from '../../components/info-block/InfoBlock';
 
 const PracticalInformation = () => (
     <App>
         <div className={css.container}>
             <div className={css.heading}>LITT PRAKTISK INFORMASJON</div>
 
-            <div className={css.infoBlock}>
-                <div className={css.title}>Ting å huske på før festivalen</div>
+            <InfoBlock title="Ting å huske på før festivalen">
                 <ul className={css.info}>
                     <li>Sjekk pakkelista</li>
                     <li>
@@ -39,17 +39,13 @@ const PracticalInformation = () => (
                     </li>
                     <li>Si fra når og hvordan du kommer deg til festivalen</li>
                 </ul>
-            </div>
+            </InfoBlock>
 
-            <div className={css.infoBlock}>
-                <div className={css.title}>Hvor finner man festivalen?</div>
-                <div className={css.info}>
-                    <a href="https://goo.gl/maps/QWvm61hJY1xQsnN57">Falkenstensveien, 255, 3189 Horten</a>
-                </div>
-            </div>
+            <InfoBlock title="Hvor finner man festivalen?">
+                <a href="https://goo.gl/maps/QWvm61hJY1xQsnN57">Falkenstensveien, 255, 3189 Horten</a>
+            </InfoBlock>
 
-            <div className={css.infoBlock}>
-                <div className={css.title}>Hvordan komme seg hit?</div>
+            <InfoBlock title="Hvordan komme seg hit?">
                 <div className={css.transportInfo}>
                     <div className={css.heading}>
                         <span className={css.emoji}>🚂</span>Tog:
@@ -96,26 +92,21 @@ const PracticalInformation = () => (
                         </div>
                     </div>
                 </div>
-            </div>
+            </InfoBlock>
+            <InfoBlock title="Mat og drikke">
+                Jeg kjøper inn alt av mat og drikke før festivalen, alt du trenger å gjøre er å fylle inn ønskene
+                dine i{' '}
+                <a
+                    href="https://docs.google.com/spreadsheets/d/1aM8ULu5PQ-kY2asRTJJrluwhf8cCY4ceqUGAygSlrJw/edit?usp=sharing"
+                    className={css.spesiallenke}
+                >
+                    mat og drikke-oversikten
+                </a>
+                . Om du kommer på noe du vil ha etter tirsdag 16. juni - gi meg en beskjed! (Eller bare fiks det
+                sjæl).
+            </InfoBlock>
 
-            <div className={css.infoBlock}>
-                <div className={css.title}>Mat og drikke</div>
-                <div className={css.info}>
-                    Jeg kjøper inn alt av mat og drikke før festivalen, alt du trenger å gjøre er å fylle inn
-                    ønskene dine i{' '}
-                    <a
-                        href="https://docs.google.com/spreadsheets/d/1aM8ULu5PQ-kY2asRTJJrluwhf8cCY4ceqUGAygSlrJw/edit?usp=sharing"
-                        className={css.spesiallenke}
-                    >
-                        mat og drikke-oversikten
-                    </a>
-                    . Om du kommer på noe du vil ha etter tirsdag 16. juni - gi meg en beskjed! (Eller bare fiks
-                    det sjæl).
-                </div>
-            </div>
-
-            <div className={css.infoBlock}>
-                <div className={css.title}>Fest nå? Jammen, det er jo Korona?</div>
+            <InfoBlock title="Fest nå? Jammen, det er jo Korona?">
                 <div className={classNames(css.info, css.koronaintro)}>
                     Det stemmer, det er Korona, så det må vi også ta hensyn til. Derfor kommer det en liten liste
                     med ting vi bør tenke på:
@@ -131,7 +122,7 @@ const PracticalInformation = () => (
                     <li>Bruk antibac</li>
                     <li>Siden vi er Bekkere - ta hjemmekontor mandag og tirsdag om du har mulighet for det</li>
                 </ul>
-            </div>
+            </InfoBlock>
         </div>
     </App>
 );
