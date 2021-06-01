@@ -26,7 +26,10 @@ const PracticalInformation = () => (
                         </a>{' '}
                         til festivalen
                     </li>
-                    <li>Hør med deg selv og sjekk om det er noe du kunne tenkt deg å underholde/bidra med</li>
+                    <li>
+                        Husk ønsket om at alle skal bidra med noe lite (eller stort) i form av
+                        underholdning/oppgave/lek/aktivitet i løpet av festivalen.
+                    </li>
                     <li>
                         Sjekk{' '}
                         <a
@@ -62,8 +65,8 @@ const PracticalInformation = () => (
                     </div>
                     <div className={css.info}>
                         Vy kjører også buss fra Oslo som tar deg fra Oslo bussterminal Kopstadkrysset på ca. 1
-                        time. Dette er stoppestedet nærmest Horten, og hvis du gir meg en lyd så fikser jeg også
-                        her transport til festivalen.
+                        time. Dette er stoppestedet nærmest Horten, og hvis du gir meg en lyd så skal vi se om vi
+                        får fikset transport til festivalområdet.
                     </div>
                 </div>
                 <div className={css.transportInfo}>
@@ -102,25 +105,23 @@ const PracticalInformation = () => (
                 >
                     mat og drikke-oversikten
                 </a>
-                . Om du kommer på noe du vil ha etter tirsdag 16. juni - gi meg en beskjed! (Eller bare fiks det
+                . Om du kommer på noe du vil ha etter tirsdag 15. juni - gi meg en beskjed! (Eller bare fiks det
                 sjæl).
             </InfoBlock>
 
-            <InfoBlock title="Fest nå? Jammen, det er jo Korona?">
+            <InfoBlock title="Det er jo fortsatt litt Korona, hva gjør vi med det?">
                 <div className={classNames(css.info, css.koronaintro)}>
-                    Det stemmer, det er Korona, så det må vi også ta hensyn til. Derfor kommer det en liten liste
-                    med ting vi bør tenke på:
+                    Det stemmer, selv om det er sommer 2021 så er det fortsatt litt Korona der ute, så det må vi ta
+                    litt hensyn til. Derfor kommer det en liten liste med ting vi bør tenke på:
                 </div>
                 <ul className={css.info}>
-                    <li>Selv om det er kjipt, sjekk formen og vær ærlig med deg selv før du kommer</li>
                     <li>Prøv å holde avstand</li>
                     <li>Ikke drikke av hverandres glass</li>
-                    <li>Ingen klining</li>
+                    <li>Ingen klining (på tvers av allerede etablerte kjærstepar)</li>
                     <li>Ikke masse klemming</li>
                     <li>Host i abluen</li>
                     <li>Vask hendene godt</li>
                     <li>Bruk antibac</li>
-                    <li>Siden vi er Bekkere - ta hjemmekontor mandag og tirsdag om du har mulighet for det</li>
                 </ul>
             </InfoBlock>
         </div>
