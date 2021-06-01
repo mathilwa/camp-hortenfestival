@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import nemanja from './icons/nemanja.png';
-import petter from './icons/petter.png';
 import theass from './icons/theass.png';
 import theahj from './icons/theahj.png';
 import emilie from './icons/emilie.png';
@@ -9,6 +8,7 @@ import kristian from './icons/kristian.png';
 import hege from './icons/hege.png';
 import matta from './icons/matta.png';
 import marlin from './icons/marlin.png';
+import vetle from './icons/vetle.png';
 import css from './folka.less';
 import App from '../../components/app/App';
 import 'firebase/firestore';
@@ -18,13 +18,11 @@ import { useUserDatabase } from '../../components/auth/Authentication';
 interface Festivalmenneske {
     name: string;
     icon: string;
-    favSongTitle: string;
-    favSongLink: string;
     info: string;
 }
 
 const getIcon = (iconDescriptionForUser: string) => {
-    const allIcons = [nemanja, kristian, nicolai, petter, emilie, theahj, theass, marlin, matta, hege];
+    const allIcons = [nemanja, kristian, nicolai, emilie, theahj, theass, marlin, matta, hege, vetle];
     const userIcon = allIcons.find(icon => icon.includes(iconDescriptionForUser));
     return userIcon ? userIcon : '';
 };
@@ -44,13 +42,13 @@ const Folka: React.FC = () => {
 
             users.forEach(user => {
                 const festivalUser = user.data();
-                liste.push({
-                    name: festivalUser.name,
-                    favSongTitle: festivalUser.favSongTitle,
-                    favSongLink: festivalUser.favSongLink,
-                    icon: getIcon(festivalUser.icon),
-                    info: festivalUser.info,
-                });
+                if (festivalUser.name !== 'Petter') {
+                    liste.push({
+                        name: festivalUser.name,
+                        icon: getIcon(festivalUser.icon),
+                        info: festivalUser.info,
+                    });
+                }
             });
 
             setFolka(liste);
@@ -59,7 +57,7 @@ const Folka: React.FC = () => {
     }, [database]);
 
     const folkaSorted = folka.sort(
-        (festivaldeltakerA, festivaldeltakerB) => festivaldeltakerB.name.length - festivaldeltakerA.name.length,
+        (festivaldeltakerA, festivaldeltakerB) => festivaldeltakerB.info.length - festivaldeltakerA.info.length,
     );
 
     return (
@@ -71,12 +69,12 @@ const Folka: React.FC = () => {
                         <div className={css.fakta}>
                             <div className={css.name}>{festivaldeltaker.name}</div>
                             <div className={css.info}>{festivaldeltaker.info}</div>
-                            {festivaldeltaker.favSongTitle && (
-                                <span className={css.song}>
-                                    Favorittsang om dagen:{' '}
-                                    <a href={festivaldeltaker.favSongLink}>{festivaldeltaker.favSongTitle}</a>
-                                </span>
-                            )}
+                            {/*{festivaldeltaker.favSongTitle && (*/}
+                            {/*    <span className={css.song}>*/}
+                            {/*        Favorittsang om dagen:{' '}*/}
+                            {/*        <a href={festivaldeltaker.favSongLink}>{festivaldeltaker.favSongTitle}</a>*/}
+                            {/*    </span>*/}
+                            {/*)}*/}
                         </div>
                     </div>
                 ))}

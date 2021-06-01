@@ -35,6 +35,22 @@ const HouseOverview: React.FC = () => (
                 skjer i hovedsak på kjøkkenet, og når det blir fullt der kan søpla tømmes i søppelkassene står i
                 oppkjørselen.
             </InfoBlock>
+
+            <InfoBlock title="Dyr">
+                Det vil være flere dyr tilstede under festival. Det er tre kaniner (<strong>Nora</strong>,{' '}
+                <strong>Vilde</strong> og <strong>Glenn-Isak</strong>) i et bur under verandaen, og en katt (
+                <strong>Einar</strong>) som kommer til å være sammen med oss hele tiden. Einar bor også inne, så
+                hvis det er noen med allergier så kan det være lurt å ta med medisin for dette.
+                <br />
+                <br />
+                Einar har forresten aldri vært på festival før, så ta godt imot ham!
+            </InfoBlock>
+
+            <InfoBlock title="Hjemmekontor">
+                Det vil være mulighet for å ta hjemmekontor på Camp Horten torsdag og fredag hvis det er ønskelig.
+                De vanlige "kontorplassene" vil være omgjort til soverom under festivalen, men vi finner alltids
+                plass! Og internett har man jo, så det løser seg.
+            </InfoBlock>
         </div>
 
         <div className={css.romoversikt}>
