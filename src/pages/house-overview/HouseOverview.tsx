@@ -4,8 +4,8 @@ import 'firebase/auth';
 import css from './house-overview.less';
 import { withAuthentication } from '../../components/auth/Authentication';
 
-import andreEtasje from './icons/andre-etasje.svg';
-import forsteEtasje from './icons/forste-etasje.svg';
+import andreEtasje from './icons/AndreEtasje.svg.svg';
+import forsteEtasje from './icons/ForsteEtasje.svg.svg';
 import romfordelingLogo from './icons/romfordeling-logo.svg';
 import App from '../../components/app/App';
 import InfoBlock from '../../components/info-block/InfoBlock';
