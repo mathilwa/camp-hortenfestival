@@ -1,10 +1,12 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, FunctionComponent, useContext, useEffect, useState } from 'react';
 import * as firebase from 'firebase/app';
+import PropTypes from 'prop-types';
 import 'firebase/auth';
 import 'firebase/firestore';
 import { useHistory } from 'react-router';
 import Spinner from '../spinner/Spinner';
 import { RouteName } from '../../index';
+import { RouteComponentProps } from 'react-router-dom';
 
 const firebaseNotInitialized = firebase.apps.length === 0;
 if (firebaseNotInitialized) {
@@ -104,10 +106,20 @@ export const useUserDatabase = (): firebase.firestore.CollectionReference<fireba
 
 export const withAuthentication = function withAuthenticationWrapper<T>(
     WrappedComponent: React.FC<T>,
-): React.FC<T> {
-    return (props: T) => (
+): FunctionComponent<T & RouteComponentProps> {
+    // @ts-ignore
+    const propTypes = {
+        match: PropTypes.object.isRequired,
+        location: PropTypes.object.isRequired,
+        history: PropTypes.object.isRequired,
+    };
+
+    // @ts-ignore
+    const { match, location, history } = this.props;
+
+    return (newProps: T) => (
         <AuthenticationProvider>
-            <WrappedComponent {...props} />
+            <WrappedComponent {...newProps} />
         </AuthenticationProvider>
     );
 };

@@ -43,9 +43,7 @@ const App: React.FC = ({ children }) => {
     return (
         <div className={css.app} onClick={launceConfetti} onMouseMove={onMouseMove}>
             <Menu loggedInUser={loggedInUser} />
-            <div className={css.childrenContainer}>
-                {children}
-            </div>
+            <div className={css.childrenContainer}>{children}</div>
         </div>
     );
 };
