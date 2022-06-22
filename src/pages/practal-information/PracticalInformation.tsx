@@ -97,31 +97,36 @@ const PracticalInformation = () => (
                 </div>
             </InfoBlock>
             <InfoBlock title="Mat og drikke">
-                Jeg kjøper inn alt av mat og drikke før festivalen, alt du trenger å gjøre er å fylle inn ønskene
-                dine i{' '}
-                <a
-                    href="https://docs.google.com/spreadsheets/d/1aM8ULu5PQ-kY2asRTJJrluwhf8cCY4ceqUGAygSlrJw/edit?usp=sharing"
-                    className={css.spesiallenke}
-                >
-                    mat og drikke-oversikten
-                </a>
-                . Om du kommer på noe du vil ha etter tirsdag 15. juni - gi meg en beskjed! (Eller bare fiks det
-                sjæl).
+                Det blir kjøpt inn alt av mat og drikke før festivalen, alt du trenger å gjøre er å komme og nyte
+                det som blir servert! Om du har spesielle ønsker kan det sendes til Emilie eller meg! (Eller bare
+                fiks det sjæl).
             </InfoBlock>
 
-            <InfoBlock title="Det er jo fortsatt litt Korona, hva gjør vi med det?">
+            <InfoBlock title="Ting å tenke på">
                 <div className={classNames(css.info, css.koronaintro)}>
-                    Det stemmer, selv om det er sommer 2021 så er det fortsatt litt Korona der ute, så det må vi ta
-                    litt hensyn til. Derfor kommer det en liten liste med ting vi bør tenke på:
+                    Camp Horten uten Korona - tenk så deilig! Nå kan vi klemme og danse og alt vi vil, men husk
+                    likevel å ta vare på hverandre <span className={css.emoji}>🤗</span>
+                    Jeg har likevel en liten liste å tenke på:
                 </div>
                 <ul className={css.info}>
-                    <li>Prøv å holde avstand</li>
-                    <li>Ikke drikke av hverandres glass</li>
-                    <li>Ingen klining (på tvers av allerede etablerte kjærstepar)</li>
-                    <li>Ikke masse klemming</li>
-                    <li>Host i abluen</li>
-                    <li>Vask hendene godt</li>
-                    <li>Bruk antibac</li>
+                    <li>
+                        Det er dyr på festivalområdet - 3 kaniner og én katt. Ta gjerne litt hensyn til disse!{' '}
+                    </li>
+                    <li>
+                        Det er mye pollen i lufta om dagen, så hvis du reagerer på dette kan det være lurt å ta med
+                        noe medisin. Det kommer til å være zyrtec og øyedråper tilgjengelig på festivalområdet.
+                    </li>
+                    <li>
+                        Soundbox på full(!) styrke kan gjerne unngås. Spesielt på dagtid. Dette med hensyn til
+                        naboer (som har fått nabovarsel, men likevel)
+                    </li>
+                    <li>
+                        Pga kur skal jeg helst ikke klemmes akkurat når vi har festival (miip{' '}
+                        <span className={css.emoji}>🥲</span>), men jeg albuer gjerne!
+                    </li>
+                    <li>Ikke sko inne</li>
+                    <li>Tørk opp vann fra gulvene så vi ikke ødelegger parketten</li>
+                    <li>Husk å glede dere!</li>
                 </ul>
             </InfoBlock>
         </div>

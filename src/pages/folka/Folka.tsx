@@ -69,12 +69,6 @@ const Folka: React.FC = () => {
                         <div className={css.fakta}>
                             <div className={css.name}>{festivaldeltaker.name}</div>
                             <div className={css.info}>{festivaldeltaker.info}</div>
-                            {/*{festivaldeltaker.favSongTitle && (*/}
-                            {/*    <span className={css.song}>*/}
-                            {/*        Favorittsang om dagen:{' '}*/}
-                            {/*        <a href={festivaldeltaker.favSongLink}>{festivaldeltaker.favSongTitle}</a>*/}
-                            {/*    </span>*/}
-                            {/*)}*/}
                         </div>
                     </div>
                 ))}

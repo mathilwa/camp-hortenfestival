@@ -19,6 +19,7 @@ const Pakkeliste = () => (
                     <div>Et hodeplagg</div>
                     <div>Allergimedisin</div>
                     <div>Noe fargerikt!</div>
+                    <div>Ting til å stashe hår med</div>
                     <div>Varme klær til kvelden</div>
                     <div>Sko det er lett å ta av og på</div>
                     <div>Klær du kan bevege deg i</div>
@@ -29,6 +30,7 @@ const Pakkeliste = () => (
                 <div className={css.pakkelisteHeading}>IKKE TA MED</div>
                 <div className={css.ikkeTaMed}>
                     <div>Mat</div>
+                    <div>Glitter</div>
                     <div>Drikke</div>
                     <div>Antibac</div>
                     <div>Solkrem</div>
@@ -38,7 +40,6 @@ const Pakkeliste = () => (
                     <div>Lommepenger</div>
                     <div>Noe å sove på</div>
                     <div>Sengetøy eller sovepose</div>
-                    <div>Hårføner? (Jeg har én)</div>
                 </div>
             </div>
         </div>
