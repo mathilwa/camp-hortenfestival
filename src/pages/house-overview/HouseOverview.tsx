@@ -5,7 +5,7 @@ import css from './house-overview.less';
 import { withAuthentication } from '../../components/auth/Authentication';
 
 import andreEtasje from './icons/AndreEtasje.svg';
-import forsteEtasje from './icons/ForsteEtasje.svg';
+import forsteEtasje from './icons/HovedEtasje.svg';
 import romfordelingLogo from './icons/romfordeling-logo.svg';
 import App from '../../components/app/App';
 import InfoBlock from '../../components/info-block/InfoBlock';
@@ -43,11 +43,11 @@ const HouseOverview: React.FC = () => (
                 hvis det er noen med allergier så kan det være lurt å ta med medisin for dette.
                 <br />
                 <br />
-                Einar har forresten aldri vært på festival før, så ta godt imot ham!
+                Einar gleder seg veldig til å se dere igjen!
             </InfoBlock>
 
             <InfoBlock title="Hjemmekontor">
-                Det vil være mulighet for å ta hjemmekontor på Camp Horten torsdag og fredag hvis det er ønskelig.
+                Det vil være mulighet for å ta hjemmekontor på Camp Horten på fredag hvis det er ønskelig.
                 De vanlige "kontorplassene" vil være omgjort til soverom under festivalen, men vi finner alltids
                 plass! Og internett har man jo, så det løser seg.
             </InfoBlock>

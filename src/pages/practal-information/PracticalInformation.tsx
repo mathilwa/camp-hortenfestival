@@ -27,18 +27,12 @@ const PracticalInformation = () => (
                         til festivalen
                     </li>
                     <li>
-                        Husk ønsket om at alle skal bidra med noe lite (eller stort) i form av
-                        underholdning/oppgave/lek/aktivitet i løpet av festivalen.
+                        Om du har ønske om å bidra med noe til festivalen, stort eller smått, av
+                        underholdning/oppgave/lek/aktivitet så er du hjertelig velkommen til det!
                     </li>
                     <li>
-                        Sjekk{' '}
-                        <a
-                            href="https://docs.google.com/spreadsheets/d/1aM8ULu5PQ-kY2asRTJJrluwhf8cCY4ceqUGAygSlrJw/edit?usp=sharing"
-                            className={css.spesiallenke}
-                        >
-                            mat og drikke-oversikten
-                        </a>{' '}
-                        om du har fått med deg din favorittnæring
+                        Om du har spesielle ønsker hva kommer til næring utover allergier, sjekk med Emilie om det
+                        har kommet med på handlelista
                     </li>
                     <li>Si fra når og hvordan du kommer deg til festivalen</li>
                 </ul>
@@ -118,7 +112,7 @@ const PracticalInformation = () => (
                     </li>
                     <li>
                         Soundbox på full(!) styrke kan gjerne unngås. Spesielt på dagtid. Dette med hensyn til
-                        naboer (som har fått nabovarsel, men likevel)
+                        naboer (som har fått nabovarsel - og ønsker oss en god fest - men likevel)
                     </li>
                     <li>
                         Pga kur skal jeg helst ikke klemmes akkurat når vi har festival (miip{' '}
