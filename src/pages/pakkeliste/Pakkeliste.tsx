@@ -33,7 +33,6 @@ const Pakkeliste = () => (
                     <div>Antibac</div>
                     <div>Solkrem</div>
                     <div>Håndklær</div>
-                    <div>Sengetøy</div>
                     <div>Rettetang</div>
                     <div>Shampoo og balsam</div>
                     <div>Lommepenger</div>
