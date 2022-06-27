@@ -47,9 +47,15 @@ const HouseOverview: React.FC = () => (
             </InfoBlock>
 
             <InfoBlock title="Hjemmekontor">
-                Det vil være mulighet for å ta hjemmekontor på Camp Horten på fredag hvis det er ønskelig.
-                De vanlige "kontorplassene" vil være omgjort til soverom under festivalen, men vi finner alltids
+                Det vil være mulighet for å ta hjemmekontor på Camp Horten på fredag hvis det er ønskelig. De
+                vanlige "kontorplassene" vil være omgjort til soverom under festivalen, men vi finner alltids
                 plass! Og internett har man jo, så det løser seg.
+            </InfoBlock>
+            <InfoBlock title="Sengeplasser">
+                Der det er kjærlighet er det husrom - eller noe i den duren. De som har vært på festivalen før vet
+                at det campes trangt, og i år har er vi to ekstra deltakere. Det vil si at det i år vil være litt
+                trangt om plassen, men forhåpentlig er det bare fint og hyggelig! Se oversikt over huset nedenfor
+                for detaljer.
             </InfoBlock>
         </div>
 
@@ -57,6 +63,7 @@ const HouseOverview: React.FC = () => (
             <div className={css.romfordelingHeading}>
                 <img src={romfordelingLogo} alt="romfordeling-logo" />
             </div>
+
             <img className={css.etasje} src={forsteEtasje} alt="forste-etasje" />
             <img className={css.etasje} src={andreEtasje} alt="andre-etasje" />
         </div>

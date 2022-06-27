@@ -48,4 +48,5 @@ const App: React.FC = ({ children }) => {
     );
 };
 
+// @ts-ignore
 export default withRouter(withAuthentication(App));

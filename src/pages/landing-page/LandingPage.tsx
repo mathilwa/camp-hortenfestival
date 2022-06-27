@@ -42,4 +42,5 @@ const LandingPage = () => {
     );
 };
 
+// @ts-ignore
 export default withRouter(withAuthentication(LandingPage));

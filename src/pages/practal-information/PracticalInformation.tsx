@@ -3,7 +3,6 @@ import React from 'react';
 import App from '../../components/app/App';
 
 import css from './practical-information.less';
-import { withRouter } from 'react-router';
 import { withAuthentication } from '../../components/auth/Authentication';
 import classNames from 'classnames';
 import InfoBlock from '../../components/info-block/InfoBlock';
@@ -127,4 +126,5 @@ const PracticalInformation = () => (
     </App>
 );
 
-export default withRouter(withAuthentication(PracticalInformation));
+// @ts-ignore
+export default withAuthentication(PracticalInformation);

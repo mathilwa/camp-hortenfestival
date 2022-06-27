@@ -3,7 +3,6 @@ import React from 'react';
 import App from '../../components/app/App';
 
 import css from './pakkeliste.less';
-import { withRouter } from 'react-router';
 import { withAuthentication } from '../../components/auth/Authentication';
 
 const Pakkeliste = () => (
@@ -46,4 +45,4 @@ const Pakkeliste = () => (
     </App>
 );
 
-export default withRouter(withAuthentication(Pakkeliste));
+export default withAuthentication(Pakkeliste);
