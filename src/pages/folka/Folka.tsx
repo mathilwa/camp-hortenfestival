@@ -9,6 +9,8 @@ import hege from './icons/hege.png';
 import matta from './icons/matta.png';
 import marlin from './icons/marlin.png';
 import vetle from './icons/vetle.png';
+import petter from './icons/petter.png';
+import aurora from './icons/aurora.png';
 import css from './folka.less';
 import App from '../../components/app/App';
 import 'firebase/firestore';
@@ -22,7 +24,20 @@ interface Festivalmenneske {
 }
 
 const getIcon = (iconDescriptionForUser: string) => {
-    const allIcons = [nemanja, kristian, nicolai, emilie, theahj, theass, marlin, matta, hege, vetle];
+    const allIcons = [
+        nemanja,
+        kristian,
+        nicolai,
+        emilie,
+        theahj,
+        theass,
+        marlin,
+        matta,
+        hege,
+        vetle,
+        petter,
+        aurora,
+    ];
     const userIcon = allIcons.find(icon => icon.includes(iconDescriptionForUser));
     return userIcon ? userIcon : '';
 };
@@ -42,13 +57,11 @@ const Folka: React.FC = () => {
 
             users.forEach(user => {
                 const festivalUser = user.data();
-                if (festivalUser.name !== 'Petter') {
-                    liste.push({
-                        name: festivalUser.name,
-                        icon: getIcon(festivalUser.icon),
-                        info: festivalUser.info,
-                    });
-                }
+                liste.push({
+                    name: festivalUser.name,
+                    icon: getIcon(festivalUser.icon),
+                    info: festivalUser.info,
+                });
             });
 
             setFolka(liste);
