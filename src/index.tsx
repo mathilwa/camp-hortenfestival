@@ -10,6 +10,7 @@ import HouseOverview from './pages/house-overview/HouseOverview';
 import Pakkeliste from './pages/pakkeliste/Pakkeliste';
 import PracticalInformation from './pages/practal-information/PracticalInformation';
 import Folka from './pages/folka/Folka';
+import Drinks from './pages/drinks/Drinks';
 
 export enum RouteName {
     Hjem = '/',
@@ -20,6 +21,7 @@ export enum RouteName {
     PraktiskInfo = '/praktisk',
     TaMed = '/ta-med',
     Folka = '/folka',
+    Drinks = '/drinks'
 }
 
 ReactDOM.render(
@@ -32,6 +34,7 @@ ReactDOM.render(
         <Route path={RouteName.TaMed} component={Pakkeliste} />
         <Route path={RouteName.PraktiskInfo} component={PracticalInformation} />
         <Route path={RouteName.Folka} component={Folka} />
+        <Route path={RouteName.Drinks} component={Drinks} />
     </HashRouter>,
     document.getElementById('root'),
 );

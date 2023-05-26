@@ -37,6 +37,13 @@ const LandingPage = () => {
                 >
                     PRAKTISK INFO
                 </div>
+
+                <div
+                    className={classNames(css.menuBlock, css.pakkeListe)}
+                    onClick={() => history.push(RouteName.Drinks)}
+                >
+                    DRINKS
+                </div>
             </div>
         </App>
     );

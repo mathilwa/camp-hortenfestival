@@ -1,0 +1,92 @@
+.drinksContainer {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.drinkList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5rem;
+}
+
+.drink {
+    width: 100%;
+    color: white;
+    margin-bottom: 3rem;
+    max-width: 22rem;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 600px) {
+    .drink {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    .drink {
+        margin-top: -6rem;
+    }
+}
+
+.drink {
+    color: black;
+}
+
+.drink:nth-child(2n) {
+    margin-left: auto;
+}
+
+.drink:nth-child(3n + 1) {
+    background-color: #FFEED3;
+}
+
+.drink:nth-child(3n + 2) {
+    background-color: #D1F9F2;
+}
+
+.drink:nth-child(3n + 3) {
+    background-color: #FFCCD8;
+}
+
+.ingredientList {
+    padding-inline-start: unset;
+    list-style: none;
+    padding-left: 0.5rem;
+}
+
+.ingredient {
+    text-align: left;
+}
+
+.drinkHeader {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.drinkDescription {
+    text-align: left;
+    padding-left: 0.5rem;
+}
+
+.variants {
+    display: flex;
+    flex-direction: column;
+    
+    text-align: left;
+    font-style: italic;
+    font-size: 0.75rem;
+    margin-top: 1rem;
+    padding-left: 0.5rem;
+}
+
+  
